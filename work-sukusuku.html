@@ -28,14 +28,14 @@
       <!-- SP専用: ロゴ + ハンバーガーメニュー -->
       <div class="c-header">
         <div class="c-header__bar">
-          <div class="c-header__logo">
+          <a href="index.html" class="c-header__logo" aria-label="Ryusei Kimura Portfolio">
             <img
               src="assets/img/p-hero__title-bg.png"
               alt="Ryusei Kimura Portfolio"
               width="172"
               height="50"
             />
-          </div>
+          </a>
           <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false" data-c-header-toggle>
             <span class="c-header__menu-icon"></span>
             <span class="c-header__close-icon"></span>
@@ -236,9 +236,11 @@
     <!-- =========================================
          p-work-detail (Design)
          Figma: node-id=4229-5664 "p-work-detail"
-         __bodyは<p>3つ（各margin-bottom:0・追加余白なし）で構成されていたため、
+         __bodyは<p>2つ（各margin-bottom:0・追加余白なし）で構成されているため、
          __body直下ではなく.p-work-detail__text-group（余白なしラッパー）で
-         まとめている。
+         まとめている（2026-09-04: Figma側の文章更新に合わせ、本文を2段落に
+         修正。以前あった3段落目「地域のアイデンティティを〜」はFigmaの現行
+         デザインには存在しないため削除）。
          ========================================= -->
     <section class="p-work-detail">
       <div class="p-work-detail__panel">
@@ -253,10 +255,7 @@
                 本サイトのデザインでは、大人から子どもまで幅広い層に親しんでもらえるよう、難しい漢字を避けた表記や、温かみのあるタッチのイラストを採用しました。
               </p>
               <p class="p-work-detail__text">
-                カラー計画では、江別市の豊かな自然をダイレクトに表現するため、深みのある「フォレストグリーン」をメインカラーに設定。さらに、ユーザーの目を引く遊び心あるWeb演出として、トップページ上層ではスクロールに連動して山が追従する視覚効果（パララックス効果）を設計しました。
-              </p>
-              <p class="p-work-detail__text">
-                地域のアイデンティティを表現しつつ、直感的に楽しめるUI/UXを追求しています。
+                カラー設計では、江別市の豊かな自然をダイレクトに表現するため、深みのある「フォレストグリーン」をメインカラーに設定。さらに、ユーザーの目を引く遊び心あるWeb演出として、トップページ上層ではスクロールに連動して山が追従する設計にしました。
               </p>
             </div>
           </div>
