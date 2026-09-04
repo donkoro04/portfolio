@@ -67,7 +67,8 @@ html {
 }
 
 body {
-  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  /* ①英数字フォント -> ②日本語Webフォント -> ③OS内蔵フォント の順にする */
+  font-family: "Inter", "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
