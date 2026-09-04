@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Ryusei Kimura Portfolio</title>
+  <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
+       読み込む。これまで@font-face/リンクが無く、Inter未インストール環境では
+       Helvetica Neue等にフォールバックしており、本文中の英数字部分だけ実機フォントの
+       Mediumが太く見える不具合があったため追加（ユーザー指示「数字や英語のフォントが
+       太くなっているから直して」）。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <!-- =========================================
+       ヘッダー（画面固定）
+       index.htmlと同じ構造。「About Me」を現在地としてactive表示にしている。
+       PC: c-nav（node-id=4229-5406） / SP: c-header（node-id=4244-2772）
+       ========================================= -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      <!-- SP専用: ロゴ + ハンバーガーメニュー -->
+      <div class="c-header">
+        <div class="c-header__bar">
+          <div class="c-header__logo">
+            <img
+              src="assets/img/p-hero__title-bg.png"
+              alt="Ryusei Kimura Portfolio"
+              width="172"
+              height="50"
+            />
+          </div>
+          <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false" data-c-header-toggle>
+            <span class="c-header__menu-icon"></span>
+            <span class="c-header__close-icon"></span>
+          </button>
+        </div>
+        <nav class="c-header__panel" aria-label="サイト内ナビゲーション（モバイル）">
+          <div class="c-header__panel-inner">
+            <div class="c-header__panel-content">
+              <ul class="c-header__nav-list">
+                <li><a href="index.html#hero" class="c-header__nav-item">Home</a></li>
+                <li><a href="index.html#work" class="c-header__nav-item">Work</a></li>
+                <li><a href="about.html" class="c-header__nav-item">About Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- PC専用: ナビゲーションピル -->
+      <nav class="c-nav l-header__nav" aria-label="サイト内ナビゲーション">
+        <a href="index.html#hero" class="c-nav__item">Home</a>
+        <a href="index.html#work" class="c-nav__item">Work</a>
+        <a href="about.html" class="c-nav__item c-nav__item--active">About Me</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /ヘッダー -->
+
+  <main class="l-main">
+    <!-- =========================================
+         p-profile-page
+         Figma: node-id=4225-3182 "l-container"
+         トップページ(index.html)の.p-profileセクション（簡易プロフィール
+         紹介）とは別の、独立した「About Me」ページ本体。
+         ========================================= -->
+    <section class="p-profile-page" id="about">
+      <div class="p-profile-page__panel">
+        <div class="p-profile-page__header">
+          <div class="p-profile-page__title-wrapper">
+            <div class="p-profile-page__title-bg">
+              <img
+                src="assets/img/p-hero__title-bg.png"
+                alt="Ryusei Kimura Portfolio"
+                width="500"
+                height="145"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="p-profile-page__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__supplement">私について</p>
+            <p class="c-section-title__title">About Me</p>
+          </div>
+
+          <div class="p-profile-page__body">
+            <div class="c-profile-card__img">
+              <img
+                src="assets/img/c-profile-card__img.png"
+                alt="Ryusei Kimura"
+                width="372"
+                height="372"
+              />
+            </div>
+            <div class="p-profile-page__content">
+              <div class="p-profile-page__body-inner">
+                <p class="p-profile-page__name">Ryusei Kimura</p>
+                <p class="p-profile-page__text">
+                  現在、北海道情報大学に在学中。<br />
+                  大学の授業きっかけにウェブデザインに興味をもち、プロジェクト活動を通してUI／UXデザインを学べる安田研究室に参加しています。安田研究室で培った課題解決力やデザイン力を活かし、人々を引きつけつつも、自然に生活に溶け込むようなデザイン設計ができるデザイナーを目指しています。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-profile-page -->
+
+    <!-- =========================================
+         p-skill
+         Figma: node-id=4225-3212 "p-skill"
+         ========================================= -->
+    <section class="p-skill">
+      <div class="p-skill__panel">
+        <div class="p-skill__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__supplement">スキルについて</p>
+            <p class="c-section-title__title">Skill</p>
+          </div>
+
+          <p class="p-skill__text">
+            <span class="p-skill__text-main">Figma/Illustrate/Photoshop/visual studio code/After Effects</span>
+            <span class="p-skill__text-etc">etc</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- /p-skill -->
+
+    <!-- =========================================
+         p-strength
+         Figma: node-id=4225-3214 "p-strength"（2026-09-01再取得で実データ確認）
+         各項目のタイトルが従来の説明的な長文（例:「集中力の高さと追求力」）から
+         「集中力」「負けず嫌い」「素直さ」という短い単語に変更されていたため
+         修正。1つ目の本文も「ユーザーの見やすく設計し」の「目線に立ち」が
+         抜けていたのを補った（他の2項目の本文は変更なし）。
+         ========================================= -->
+    <section class="p-strength">
+      <div class="p-strength__panel">
+        <div class="p-strength__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__supplement">強みについて</p>
+            <p class="c-section-title__title">Strength</p>
+          </div>
+
+          <div class="p-strength__list">
+            <div class="c-text-group">
+              <p class="c-text-group__title">集中力</p>
+              <p class="c-text-group__text">
+                周りの声が聞こえなくなるくらいの集中力と常に「何で？」を求める追求力が私の１番の強みです。例えば、中学高校での部活動で相手の弱点を試合中に模索し、勝利に貢献していました。現在は、Webデザイン制作でユーザーの目線に立ち見やすく設計し、１pxまでこだわることに努めています。
+              </p>
+            </div>
+            <div class="c-text-group">
+              <p class="c-text-group__title">負けず嫌い</p>
+              <p class="c-text-group__text">
+                スポーツやゲームでは誰にも負けたくない「負けず嫌いな性格」の一面があり、中学高校でやっていた部活動では、どのようにして相手に勝つかや良くない点を常に分析していました。その経験が現在行なっているプロジェクト活動での課題に対して物事を多角的な視点で、分析し、熱量を持って向き合える力に繋がっています。
+              </p>
+            </div>
+            <div class="c-text-group">
+              <p class="c-text-group__title">素直さ</p>
+              <p class="c-text-group__text">
+                フィードバックに対しては「まず実践する素直さ」と「その意図や目的を深く考える論理性」を大切にしています。自分に合う形で柔軟に吸収し、常に目的意識を持ってプロジェクトに取り組むことができます
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-strength -->
+
+    <!-- =========================================
+         p-interest
+         Figma: node-id=4409-1125「p-interrest」（PC実測のみ。SP未実測）
+         ========================================= -->
+    <section class="p-interest">
+      <div class="p-interest__panel">
+        <div class="p-interest__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__supplement">趣味や特技について</p>
+            <p class="c-section-title__title">Interest</p>
+          </div>
+
+          <div class="p-interest__list">
+            <!-- node-id=4409-1295「p-interest-modal」を開くボタン。ユーザー指示
+                 「プラスボタン以外触れてもモーダル開くようにしてほしい」により、
+                 カード全体を<button>にしている（「+」は装飾のみ、aria-hidden） -->
+            <button type="button" class="p-interest__card" data-modal-open="p-interest-modal-1" aria-label="登山の写真を詳しく見る">
+              <div class="p-interest__img">
+                <img src="assets/img/p-interest__img.png" alt="登山" width="513" height="513" />
+              </div>
+              <span class="p-interest__btn" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M15 4V26M4 15H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+
+            <!-- node-id=4420-1527「p-interest-modal」を開くボタン。1枚目と同じく
+                 カード全体を<button>にしている（「+」は装飾のみ、aria-hidden） -->
+            <button type="button" class="p-interest__card" data-modal-open="p-interest-modal-2" aria-label="バドミントン・柔道の写真を詳しく見る">
+              <div class="p-interest__img">
+                <img src="assets/img/p-interest__img1.png" alt="剣道" width="513" height="513" />
+              </div>
+              <span class="p-interest__btn" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M15 4V26M4 15H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+
+            <!-- node-id=4421-1542「p-interest-modal」を開くボタン。1・2枚目と同じく
+                 カード全体を<button>にしている（「+」は装飾のみ、aria-hidden） -->
+            <button type="button" class="p-interest__card" data-modal-open="p-interest-modal-3" aria-label="動物の写真を詳しく見る">
+              <div class="p-interest__img">
+                <img src="assets/img/p-interest__img2.png" alt="あひる" width="513" height="513" />
+              </div>
+              <span class="p-interest__btn" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M15 4V26M4 15H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+
+            <!-- node-id=4424-1892「p-interest-modal」を開くボタン。1〜3枚目と同じく
+                 カード全体を<button>にしている（「+」は装飾のみ、aria-hidden） -->
+            <button type="button" class="p-interest__card" data-modal-open="p-interest-modal-4" aria-label="カフェ巡りの写真を詳しく見る">
+              <div class="p-interest__img">
+                <img src="assets/img/p-interest__img3.png" alt="カフェ巡り" width="513" height="513" />
+              </div>
+              <span class="p-interest__btn" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M15 4V26M4 15H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-interest -->
+
+    <!-- =========================================
+         p-interest-modal（1枚目・登山カード用）
+         Figma: node-id=4409-1295「p-interest-modal」（PC実測のみ。SP未実測）
+         1枚目のカード（登山）の「+」ボタンから開くモーダル。
+         ========================================= -->
+    <div class="p-interest-modal-overlay" id="p-interest-modal-1" data-modal>
+      <div class="p-interest-modal" role="dialog" aria-modal="true" aria-labelledby="p-interest-modal-1-title">
+        <button type="button" class="p-interest-modal__close" data-modal-close aria-label="閉じる">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M15 4V26M4 15H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="p-interest-modal__inner">
+          <div class="p-interest-modal__body">
+            <p class="p-interest-modal__title" id="p-interest-modal-1-title">アクティブな活動が好きです。</p>
+            <p class="p-interest-modal__text">休日で仲間と予定が合う日には、登山やスノーボードなどのアウトドアスポーツをすることがあります。</p>
+          </div>
+          <div class="p-interest-modal__img-list">
+            <div class="p-interest-modal__img">
+              <img src="assets/img/p-interest-modal__img.webp" alt="登山" width="480" height="480" />
+            </div>
+            <div class="p-interest-modal__img"><img src="assets/img/p-interest-modal__img1.webp" alt="スノボ" width="480" height="480" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /p-interest-modal -->
+
+    <!-- =========================================
+         p-interest-modal（2枚目・バドミントン/柔道カード用）
+         Figma: node-id=4420-1527「p-interest-modal」（PC実測のみ。SP未実測）
+         2枚目のカード（剣道のalt表記だが、実際の内容はバドミントン/柔道）
+         の「+」ボタンから開くモーダル。
+         ========================================= -->
+    <div class="p-interest-modal-overlay" id="p-interest-modal-2" data-modal>
+      <div class="p-interest-modal" role="dialog" aria-modal="true" aria-labelledby="p-interest-modal-2-title">
+        <button type="button" class="p-interest-modal__close" data-modal-close aria-label="閉じる">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M15 4V26M4 15H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="p-interest-modal__inner">
+          <div class="p-interest-modal__body">
+            <p class="p-interest-modal__title" id="p-interest-modal-2-title">習い事は、バドミントンと柔道をしていました。</p>
+            <p class="p-interest-modal__text">バドミントンは、7年間。柔道は、6年間続けてきました。</p>
+          </div>
+          <div class="p-interest-modal__img-list">
+            <div class="p-interest-modal__img">
+              <img src="assets/img/p-interest-modal__img2.webp" alt="柔道" width="480" height="480" />
+            </div>
+            <div class="p-interest-modal__img">
+              <img src="assets/img/p-interest-modal__img3.webp" alt="バドミントン" width="480" height="480" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /p-interest-modal -->
+
+    <!-- =========================================
+         p-interest-modal（3枚目・あひる/動物カード用）
+         Figma: node-id=4421-1542「p-interest-modal」（PC実測のみ。SP未実測）
+         3枚目のカード（あひる）の「+」ボタンから開くモーダル。
+         ========================================= -->
+    <div class="p-interest-modal-overlay" id="p-interest-modal-3" data-modal>
+      <div class="p-interest-modal" role="dialog" aria-modal="true" aria-labelledby="p-interest-modal-3-title">
+        <button type="button" class="p-interest-modal__close" data-modal-close aria-label="閉じる">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M15 4V26M4 15H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="p-interest-modal__inner">
+          <div class="p-interest-modal__body">
+            <p class="p-interest-modal__title" id="p-interest-modal-3-title">動物が好きです。</p>
+            <p class="p-interest-modal__text">小さい頃から、実家の犬や猫と共に成長してきたため、動物と触れ合うことが好きになりました。</p>
+          </div>
+          <div class="p-interest-modal__img-list">
+            <div class="p-interest-modal__img">
+              <img src="assets/img/p-interest-modal__img4.webp" alt="あひる" width="480" height="480" />
+            </div>
+            <div class="p-interest-modal__img">
+              <img src="assets/img/p-interest-modal__img5.webp" alt="実家の猫" width="480" height="480" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /p-interest-modal -->
+
+    <!-- =========================================
+         p-interest-modal（4枚目・カフェ巡りカード用）
+         Figma: node-id=4424-1892「p-interest-modal」（PC実測のみ。SP未実測）
+         4枚目のカード（カフェ巡り）の「+」ボタンから開くモーダル。
+         左側の写真（書店内観）・右側の写真（コーヒーとデザート）は、
+         カードのサムネイル（p-interest__img3.png）ともFigma上で別アセット
+         として書き出されていたため、1〜3枚目のモーダルと同じく専用の
+         ファイル（p-interest-modal__img6.webp / p-interest-modal__img7.webp。
+         他のファイル名と同様、Figmaのレイヤー名そのままだった
+         「Rectangle NN」から、他の画像と同じ命名規則
+         [p-block__element(-連番)] に合わせて変更した）を個別に用意する。
+         右側の写真（コーヒーとデザート）は
+         Figma上では中央基準のobject-fit:coverではなく、上下左右にはみ出す
+         形で特定位置を見せるトリミングが指定されていたが、実データの書き出しが
+         まだ届いていないため、ひとまず他の写真と同じ.p-interest-modal__img
+         （object-fit:cover）で実装している。実データ到着後、見た目が
+         Figmaと異なる場合はobject-positionのmodifierを追加して調整する。
+         ========================================= -->
+    <div class="p-interest-modal-overlay" id="p-interest-modal-4" data-modal>
+      <div class="p-interest-modal" role="dialog" aria-modal="true" aria-labelledby="p-interest-modal-4-title">
+        <button type="button" class="p-interest-modal__close" data-modal-close aria-label="閉じる">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M15 4V26M4 15H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="p-interest-modal__inner">
+          <div class="p-interest-modal__body">
+            <p class="p-interest-modal__title" id="p-interest-modal-4-title">カフェ巡りが好きです。</p>
+            <p class="p-interest-modal__text">休日や時間のある日には、カフェに行き、作業や勉強をすることがあります。</p>
+          </div>
+          <div class="p-interest-modal__img-list">
+            <div class="p-interest-modal__img">
+              <img src="assets/img/p-interest-modal__img6.webp" alt="書店内観" width="480" height="480" />
+            </div>
+            <div class="p-interest-modal__img">
+              <img src="assets/img/p-interest-modal__img7.webp" alt="カフェのコーヒーとデザート" width="480" height="480" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /p-interest-modal -->
+  </main>
+
+  <!-- =========================================
+       p-footer
+       Figma: node-id=4424-1575「l-footer」（PC実測）/
+              node-id=4424-1956「l-conteiner」（SP実測）
+       ========================================= -->
+  <footer class="l-footer">
+    <div class="p-footer">
+      <div class="p-footer__panel">
+        <div class="p-footer__contact">
+          <p class="p-footer__label">Contact</p>
+          <a href="mailto:s2421160@s.do-johodai.ac.jp" class="p-footer__mail" target="_blank">s2421160@s.do-johodai.ac.jp</a>
+        </div>
+        <p class="p-footer__copyright">&copy; 2026 Kimura Ryusei</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /p-footer -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryusei Kimura | Portfolio</title>
+  <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
+       読み込む。これまで@font-face/リンクが無く、Inter未インストール環境では
+       Helvetica Neue等にフォールバックしており、本文中の英数字部分だけ実機フォントの
+       Mediumが太く見える不具合があったため追加（ユーザー指示「数字や英語のフォントが
+       太くなっているから直して」）。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+
+<body>
+  <!-- =========================================
+       c-nav（画面固定ナビゲーション）
+       Figma: node-id=4229-5406
+       ========================================= -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      <!-- SP専用: ロゴ + ハンバーガーメニュー -->
+      <div class="c-header">
+        <div class="c-header__bar">
+          <div class="c-header__logo">
+            <img src="assets/img/p-hero__title-bg.png" alt="Ryusei Kimura Portfolio" width="172" height="50" />
+          </div>
+          <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false"
+            data-c-header-toggle>
+            <span class="c-header__menu-icon"></span>
+            <span class="c-header__close-icon"></span>
+          </button>
+        </div>
+        <nav class="c-header__panel" aria-label="サイト内ナビゲーション（モバイル）">
+          <div class="c-header__panel-inner">
+            <div class="c-header__panel-content">
+              <ul class="c-header__nav-list">
+                <li><a href="#hero" class="c-header__nav-item">Home</a></li>
+                <li><a href="#work" class="c-header__nav-item">Work</a></li>
+                <li><a href="about.html" class="c-header__nav-item">About Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- PC専用: ナビゲーションピル -->
+      <nav class="c-nav l-header__nav" aria-label="サイト内ナビゲーション">
+        <a href="#hero" class="c-nav__item c-nav__item--active">Home</a>
+        <a href="#work" class="c-nav__item">Work</a>
+        <a href="about.html" class="c-nav__item">About Me</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /c-nav -->
+
+  <main class="l-main">
+    <!-- =========================================
+         p-hero
+         Figma: node-id=4229-5439
+         ========================================= -->
+    <section class="p-hero" id="hero">
+      <div class="p-hero__panel">
+        <div class="p-hero__inner">
+          <div class="p-hero__header">
+            <div class="p-hero__title-wrapper">
+              <div class="p-hero__title-bg">
+                <img src="assets/img/p-hero__title-bg.png" alt="Ryusei Kimura Portfolio" width="484" height="140" />
+              </div>
+            </div>
+          </div>
+
+          <p class="p-hero__lead">集中力を、デザインの細部に宿す。</p>
+
+          <div class="p-hero__visual-area">
+            <div class="p-hero__visual-wrapper">
+              <div class="p-hero__visual1">
+                <img src="assets/img/p-hero__visual1.png" alt="" width="697" height="726" />
+              </div>
+            </div>
+
+            <div class="c-scroll-down">
+              <p class="c-scroll-down__text">Thank you for visiting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- /p-hero -->
+
+    <!-- =========================================
+         p-work
+         Figma: node-id=4200-1070
+         ========================================= -->
+    <section class="p-work" id="work">
+      <div class="p-work__panel">
+        <div class="p-work__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Work</p>
+          </div>
+
+          <ul class="p-work-list">
+            <!-- node-id=4200-1070マスターで確認。制作中のためリンク・画像とも未設定。 -->
+            <li class="p-card-work">
+              <div class="p-card-work__img-wrapper">
+                <div class="p-card-work__img"><!-- 画像未設定（プレースホルダー） --></div>
+              </div>
+              <div class="p-card-work__content">
+                <ul class="p-card-work__category-list">
+                  <li class="c-category">#クライアントワークス</li>
+                  <li class="c-category c-category--outline">#Webデザイン</li>
+                </ul>
+                <p class="p-card-work__title">クライアント様　サイトリニューアル(制作途中）</p>
+              </div>
+            </li>
+
+            <li class="p-card-work">
+              <a href="work-app.html" class="p-card-work__link">
+                <div class="p-card-work__img-wrapper">
+                  <div class="p-card-work__img">
+                    <img src="assets/img/p-outline__img-app.webp" alt="学生向け交通系アプリ" width="480" height="300" />
+                  </div>
+                </div>
+                <div class="p-card-work__content">
+                  <ul class="p-card-work__category-list">
+                    <li class="c-category">#自主制作</li>
+                    <li class="c-category c-category--outline">#アプリデザイン</li>
+                  </ul>
+                  <p class="p-card-work__title">学生向け交通系アプリ</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-card-work">
+              <a href="work-sukusuku.html" class="p-card-work__link">
+                <div class="p-card-work__img-wrapper">
+                  <div class="p-card-work__img"><img src="assets/img/p-outline__img-sukusuku.webp" alt="架空サイトすくすく"
+                      width="480" height="300" />
+                  </div>
+                </div>
+                <div class="p-card-work__content">
+                  <ul class="p-card-work__category-list">
+                    <li class="c-category">#課題制作</li>
+                    <li class="c-category c-category--outline">#Webデザイン</li>
+                  </ul>
+                  <p class="p-card-work__title">架空サイトすくすく</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-card-work">
+              <a href="work-portfolio.html" class="p-card-work__link">
+                <div class="p-card-work__img-wrapper">
+                  <div class="p-card-work__img">
+                    <img src="assets/img/p-outline__img-portfolio.webp" alt="ポートフォリオ"
+                      width="480" height="300" />
+                  </div>
+                </div>
+                <div class="p-card-work__content">
+                  <ul class="p-card-work__category-list">
+                    <li class="c-category">#自主制作</li>
+                    <li class="c-category c-category--outline">#Webデザイン</li>
+                  </ul>
+                  <p class="p-card-work__title">ポートフォリオサイト</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-card-work">
+              <a href="work-novelty.html" class="p-card-work__link">
+                <div class="p-card-work__img-wrapper">
+                  <div class="p-card-work__img"><img src="assets/img/p-outline__img-novelty.webp" alt="ノベルティ制作"
+                      width="480" height="300" />
+                  </div>
+                </div>
+                <div class="p-card-work__content">
+                  <ul class="p-card-work__category-list">
+                    <li class="c-category">#ワークショップ課題</li>
+                    <li class="c-category c-category--outline">#パッケージデザイン</li>
+                  </ul>
+                  <p class="p-card-work__title">ノベルティ制作</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-card-work">
+              <a href="work-detail.html" class="p-card-work__link">
+                <div class="p-card-work__img-wrapper">
+                  <div class="p-card-work__img">
+                    <img src="assets/img/p-outline__img.webp" alt="バナー制作" width="480" height="300" />
+                  </div>
+                </div>
+                <div class="p-card-work__content">
+                  <ul class="p-card-work__category-list">
+                    <li class="c-category">＃自主制作</li>
+                    <li class="c-category c-category--outline">＃バナーデザイン</li>
+                  </ul>
+                  <p class="p-card-work__title">バナー制作</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work -->
+
+    <!-- =========================================
+         p-profile（旧p-about。Figma上のレイヤー名は"p-about"だが、
+         node-id=4200-1083の"p-contact"を p-about として使う方針になったためリネーム）
+         Figma: node-id=4200-1079
+         ========================================= -->
+    <section class="p-profile" id="about">
+      <div class="p-profile__panel">
+        <div class="p-profile__inner">
+          <div class="p-profile__title">
+            <p>About Me</p>
+          </div>
+
+          <div class="c-profile-card">
+            <div class="c-profile-card__img">
+              <img src="assets/img/c-profile-card__img.png" alt="Ryusei Kimura" width="372" height="372" />
+            </div>
+            <div class="c-profile-card__content">
+              <div class="c-profile-card__body">
+                <p class="c-profile-card__name">Ryusei Kimura</p>
+                <p class="c-profile-card__text">
+                  現在、北海道情報大学に在学中。<br />
+                  大学の授業きっかけにウェブデザインに興味をもち、プロジェクト活動を通してUI／UXデザインを学べる安田研究室に参加しています。安田研究室で培った課題解決力やデザイン力を活かし、人々を引きつけつつも、自然に生活に溶け込むようなデザイン設計ができるデザイナーを目指しています。
+                </p>
+              </div>
+              <a href="about.html" class="c-profile-card__cta">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-profile -->
+
+  </main>
+
+  <!-- =========================================
+       p-footer
+       Figma: node-id=4424-1575「l-footer」（PC実測）/
+              node-id=4424-1956「l-conteiner」（SP実測）
+       ユーザー指示「p-contactを削除して」により、旧p-about（Figma上は
+       "p-contact"）のContactセクションを削除。フッターに同等のContact情報
+       （見出し＋mailtoリンク）があるため、ナビの#contactアンカーは
+       このl-footerに付け替えて維持している。
+       ========================================= -->
+  <footer class="l-footer" id="contact">
+    <div class="p-footer">
+      <div class="p-footer__panel">
+        <div class="p-footer__contact">
+          <p class="p-footer__label">Contact</p>
+          <a href="mailto:s2421160@s.do-johodai.ac.jp" class="p-footer__mail" target="_blank">s2421160@s.do-johodai.ac.jp</a>
+        </div>
+        <p class="p-footer__copyright">&copy; 2026 Kimura Ryusei</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /p-footer -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>

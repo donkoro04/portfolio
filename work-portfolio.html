@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ポートフォリオサイト | Ryusei Kimura Portfolio</title>
+  <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
+       読み込む。これまで@font-face/リンクが無く、Inter未インストール環境では
+       Helvetica Neue等にフォールバックしており、本文中の英数字部分だけ実機フォントの
+       Mediumが太く見える不具合があったため追加（ユーザー指示「数字や英語のフォントが
+       太くなっているから直して」）。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <!-- =========================================
+       ヘッダー（画面固定）
+       他のwork-*.htmlと同じ構造。「Work」を現在地としてactive表示にしている。
+       PC: c-nav（node-id=4229-5406） / SP: c-header（node-id=4244-2772）
+       ========================================= -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      <!-- SP専用: ロゴ + ハンバーガーメニュー -->
+      <div class="c-header">
+        <div class="c-header__bar">
+          <div class="c-header__logo">
+            <img
+              src="assets/img/p-hero__title-bg.png"
+              alt="Ryusei Kimura Portfolio"
+              width="172"
+              height="50"
+            />
+          </div>
+          <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false" data-c-header-toggle>
+            <span class="c-header__menu-icon"></span>
+            <span class="c-header__close-icon"></span>
+          </button>
+        </div>
+        <nav class="c-header__panel" aria-label="サイト内ナビゲーション（モバイル）">
+          <div class="c-header__panel-inner">
+            <div class="c-header__panel-content">
+              <ul class="c-header__nav-list">
+                <li><a href="index.html#hero" class="c-header__nav-item">Home</a></li>
+                <li><a href="index.html#work" class="c-header__nav-item">Work</a></li>
+                <li><a href="about.html" class="c-header__nav-item">About Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- PC専用: ナビゲーションピル -->
+      <nav class="c-nav l-header__nav" aria-label="サイト内ナビゲーション">
+        <a href="index.html#hero" class="c-nav__item">Home</a>
+        <a href="index.html#work" class="c-nav__item c-nav__item--active">Work</a>
+        <a href="about.html" class="c-nav__item">About Me</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /ヘッダー -->
+
+  <main class="l-main">
+    <!-- =========================================
+         p-outline
+         Figma: node-id=4236-2314 "p-outline"（2026-09-01再取得。PC実測）
+         モバイル実測: node-id=4412-1393「p-outline」（同日取得）
+         Work詳細ページ本体（index.htmlの.p-work-list「ポートフォリオサイト」
+         カードから遷移する想定。ただし今回はページ実装のみでカード側の
+         リンクはまだ繋げていない）。
+         カテゴリー2つ目のタグは表記が抜けていた「#」を補い、
+         c-category--outlineを追加。spec-listは他ページと同じ
+         使っているソフト/制作期間/メンバー/担当した役割の4項目に修正
+         （使っているソフトのみ.p-outline__spec-text-groupで複数行、他は
+         元々1行のためそのまま）。担当した役割はPC実測で「テキスト」という
+         未入力プレースホルダーだったため、SP実測の実データ「デザイナー」を
+         優先した。メインビジュアルもプレースホルダーから実データ
+         （ラップトップに表示されたサイトのモックアップ）に差し替え。
+         ========================================= -->
+    <section class="p-outline" id="outline">
+      <div class="p-outline__panel">
+        <div class="p-outline__header">
+          <div class="p-outline__title-wrapper">
+            <div class="p-outline__title-bg">
+              <img
+                src="assets/img/p-hero__title-bg.png"
+                alt="Ryusei Kimura Portfolio"
+                width="500"
+                height="145"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="p-outline__inner">
+          <div class="p-outline__heading">
+            <p class="p-outline__title">ポートフォリオサイト</p>
+            <ul class="p-outline__category-list">
+              <li class="c-category">#自主制作</li>
+              <li class="c-category c-category--outline">#Webデザイン</li>
+            </ul>
+          </div>
+
+          <p class="p-outline__lead">
+            自身の作品や経歴、強みをまとめたーポートフォリオを作成しました。
+          </p>
+
+          <div class="p-outline__spec-list">
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">使っているソフト</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">Figma</p>
+                <p class="p-outline__spec-text">Illustrator</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">制作期間</p>
+              <p class="p-outline__spec-text">4週間</p>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">メンバー</p>
+              <p class="p-outline__spec-text">デザイナー</p>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">担当した役割</p>
+              <p class="p-outline__spec-text">デザイナー</p>
+            </div>
+          </div>
+
+          <div class="p-outline__img-wrapper">
+            <div class="p-outline__img">
+              <img
+                src="assets/img/p-outline__img-portfolio.webp"
+                alt="ポートフォリオサイト"
+                width="1050"
+                height="700"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-outline -->
+
+    <!-- =========================================
+         p-work-detail (Target)
+         Figma: node-id=4236-2315 "p-work-detail"
+         他ページと共通の.p-work-detailブロックを流用。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Target</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              採用担当の方々
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Target) -->
+
+    <!-- =========================================
+         p-work-detail (Purpose)
+         Figma: node-id=4236-2316 "p-work-detail"
+         Target同様.p-work-detailブロックを流用。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Purpose</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              自分自身のこれまでの制作物や経歴、強みを伝える。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Purpose) -->
+
+    <!-- =========================================
+         p-work-detail (Information Architecture)
+         Figma: node-id=4236-2319 "p-work-detail"
+         Target/Purposeと同じ.p-work-detailブロックを流用。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Information Architecture</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              初めに、自身にできることを伝えるために、ファーストビューの後は、Workを表示しています。また、作品の種類が一目で伝わるように、作品タイトルの上部にキーワードリストを配置しました。さらに、About Meでは、自身の強みである集中力の高さをより知ってもらうために過去の出来事を具体的にまとめました。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Information Architecture) -->
+
+    <!-- =========================================
+         p-work-detail (Design)
+         Figma: node-id=4236-2318 "p-work-detail"
+         他ページのDesignセクションと異なり、本文のみで画像ブロックは無い構成。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Design</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              自身の最大の強みである、集中力の高さをデザイン落とし込むために、自分自身に関する要素以外をあえてモノトーンで構成し、対象にフォーカスしやすい配色にしました。また、自身の活動的な性格や情熱を伝えるため、要素のジャンプ率を高く設定することで、メリハリと動的な印象を与えています。さらに、各項目とセクションに十分な間隔をあけることで、視認性と可読性を向上させています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Design) -->
+    <!-- =========================================
+         p-work-thework
+         Figma: node-id=4435-2054「p-work-thework」（PC実測。子要素の
+                node-id=4435-2355「po 1」／node-id=4435-2356「pos 1」を含む）
+         ユーザー指示により、p-othersの直前に配置（Figma上の配置順とは異なる）。
+         本サイト自体のPC/SPスクリーンショット（po.png/pos.png。ユーザーが
+         Figmaから書き出したもの）を並べて見せるセクション。work-portfolio.html
+         （ポートフォリオサイト）専用で、他のWorkページには対応するFigma
+         フレームが無いため追加していない。
+         ========================================= -->
+    <section class="p-work-thework">
+      <div class="p-work-thework__panel">
+        <div class="p-work-thework__img-pc">
+          <img
+            src="assets/img/p-work-thework__img-pc.png"
+            alt="ポートフォリオサイト（PC版）のスクリーンショット"
+            width="857"
+            height="1510"
+          />
+        </div>
+        <div class="p-work-thework__img-sp">
+          <img
+            src="assets/img/p-work-thework__img-sp.png"
+            alt="ポートフォリオサイト（SP版）のスクリーンショット"
+            width="479"
+            height="4096"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-thework -->
+
+    <!-- =========================================
+         p-others
+         Figma: node-id=4424-1662「p-others」（PC実測）/
+                node-id=4424-1721「p-others」（SP実測）
+         ユーザー指示により、各Work詳細ページの一番下（p-work-detailセクション群の
+         直後）に配置。その他の制作物のサムネイルのみを並べる簡易ギャラリー。
+         1枚目はFigma上も画像未設定（グレーのプレースホルダー）。2〜5枚目は既存
+         カードと同じ画像（学生向け交通系アプリ／ポートフォリオサイト／架空サイト
+         すくすく／ノベルティ制作）を再利用。6枚目のみ既存カードに無い新規
+         ビジュアル（フィットネス系アプリ）のため新規アセットが必要
+         （assets/img/README_assets.md参照）。
+         work-portfolio.htmlのみ、ユーザー指示によりp-work-theworkの直後
+         （footerの直前）に配置。
+         ========================================= -->
+    <section class="p-others">
+      <div class="p-others__panel">
+        <div class="p-others__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">others</p>
+          </div>
+
+          <div class="p-others__list">
+            <div class="p-others__wrapper-img">
+              <div class="p-others__img"><!-- 画像未設定（プレースホルダー） --></div>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-app.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-app.webp"
+                    alt="学生向け交通系アプリ"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-portfolio.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-portfolio.webp"
+                    alt="ポートフォリオサイト"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-sukusuku.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-sukusuku.webp"
+                    alt="架空サイトすくすく"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-novelty.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-novelty.webp"
+                    alt="ノベルティ制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-detail.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img.webp"
+                    alt="バナー制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-others -->
+
+  </main>
+
+  <!-- =========================================
+       p-footer
+       Figma: node-id=4424-1575「l-footer」（PC実測）/
+              node-id=4424-1956「l-conteiner」（SP実測）
+       ========================================= -->
+  <footer class="l-footer">
+    <div class="p-footer">
+      <div class="p-footer__panel">
+        <div class="p-footer__contact">
+          <p class="p-footer__label">Contact</p>
+          <a href="mailto:s2421160@s.do-johodai.ac.jp" class="p-footer__mail" target="_blank">s2421160@s.do-johodai.ac.jp</a>
+        </div>
+        <p class="p-footer__copyright">&copy; 2026 Kimura Ryusei</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /p-footer -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

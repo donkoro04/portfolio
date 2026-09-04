@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学生向け交通系アプリ | Ryusei Kimura Portfolio</title>
+  <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
+       読み込む。これまで@font-face/リンクが無く、Inter未インストール環境では
+       Helvetica Neue等にフォールバックしており、本文中の英数字部分だけ実機フォントの
+       Mediumが太く見える不具合があったため追加（ユーザー指示「数字や英語のフォントが
+       太くなっているから直して」）。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <!-- =========================================
+       ヘッダー（画面固定）
+       work-detail.htmlと同じ構造。「Work」を現在地としてactive表示にしている。
+       PC: c-nav（node-id=4229-5406） / SP: c-header（node-id=4244-2772）
+       ========================================= -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      <!-- SP専用: ロゴ + ハンバーガーメニュー -->
+      <div class="c-header">
+        <div class="c-header__bar">
+          <div class="c-header__logo">
+            <img
+              src="assets/img/p-hero__title-bg.png"
+              alt="Ryusei Kimura Portfolio"
+              width="172"
+              height="50"
+            />
+          </div>
+          <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false" data-c-header-toggle>
+            <span class="c-header__menu-icon"></span>
+            <span class="c-header__close-icon"></span>
+          </button>
+        </div>
+        <nav class="c-header__panel" aria-label="サイト内ナビゲーション（モバイル）">
+          <div class="c-header__panel-inner">
+            <div class="c-header__panel-content">
+              <ul class="c-header__nav-list">
+                <li><a href="index.html#hero" class="c-header__nav-item">Home</a></li>
+                <li><a href="index.html#work" class="c-header__nav-item">Work</a></li>
+                <li><a href="about.html" class="c-header__nav-item">About Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- PC専用: ナビゲーションピル -->
+      <nav class="c-nav l-header__nav" aria-label="サイト内ナビゲーション">
+        <a href="index.html#hero" class="c-nav__item">Home</a>
+        <a href="index.html#work" class="c-nav__item c-nav__item--active">Work</a>
+        <a href="about.html" class="c-nav__item">About Me</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /ヘッダー -->
+
+  <main class="l-main">
+    <!-- =========================================
+         p-outline
+         Figma: node-id=4229-5568 "p-outline"（2026-09-01再取得で実データ確認）
+         Work詳細ページ本体（index.htmlの.p-work-list「学生向け交通系アプリ」
+         カードから遷移する想定）。.p-outlineブロック自体はwork-detail.html
+         （バナー練習）と共通のため新規CSSは不要。リード文2行目が外部リンクに
+         なっているため、その表示にのみ.p-outline__lead-linkを追加使用している。
+         カテゴリー2つ目のタグはc-category--outline、spec-listは
+         使っているソフト/制作期間/メンバー/担当した役割の4項目（使っている
+         ソフト・メンバーは.p-outline__spec-text-groupで複数行）と判明したため、
+         work-detail.html（バナー練習）と同じ構成に修正済み。
+         ========================================= -->
+    <section class="p-outline" id="outline">
+      <div class="p-outline__panel">
+        <div class="p-outline__header">
+          <div class="p-outline__title-wrapper">
+            <div class="p-outline__title-bg">
+              <img
+                src="assets/img/p-hero__title-bg.png"
+                alt="Ryusei Kimura Portfolio"
+                width="500"
+                height="145"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="p-outline__inner">
+          <div class="p-outline__heading">
+            <p class="p-outline__title">学生向け交通系アプリ</p>
+            <ul class="p-outline__category-list">
+              <li class="c-category">#自主制作</li>
+              <li class="c-category c-category--outline">#アプリデザイン</li>
+            </ul>
+          </div>
+
+          <p class="p-outline__lead">
+            学生向けに、交通系アプリを制作しました。<br />
+            <a
+              href="https://pattomi-tsugaku.vercel.app/"
+              class="p-outline__lead-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >https://pattomi-tsugaku.vercel.app/</a>
+          </p>
+
+          <div class="p-outline__spec-list">
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">使っているソフト</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">Figma</p>
+                <p class="p-outline__spec-text">Illustrator</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">制作期間</p>
+              <p class="p-outline__spec-text">6週間</p>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">メンバー</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">デザイナー×2</p>
+                <p class="p-outline__spec-text">プログラマー×2</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">担当した役割</p>
+              <p class="p-outline__spec-text">デザイナー</p>
+            </div>
+          </div>
+
+          <div class="p-outline__img-wrapper">
+            <div class="p-outline__img">
+              <img
+                src="assets/img/p-outline__img-app.webp"
+                alt="学生向け交通系アプリ"
+                width="1050"
+                height="700"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-outline -->
+
+    <!-- =========================================
+         p-work-detail (Target)
+         Figma: node-id=4229-5569 "p-work-detail"
+         work-detail.html（バナー練習）と共通の.p-work-detailブロックを流用。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Target</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              通学の際に交通機関を使う情報大学生
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Target) -->
+
+    <!-- =========================================
+         p-work-detail (Purpose)
+         Figma: node-id=4229-5570 "p-work-detail"
+         Target同様.p-work-detailブロックを流用しつつ、__bodyに大見出し
+         （.p-work-detail__heading）を追加した構成。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Purpose</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__heading">
+              急いでいる時に瞬時に交通情報が見えるアプリを作る。
+            </p>
+            <p class="p-work-detail__text">
+              既存の交通系アプリでは、一つの画面に複数の機能があり、多機能ゆえの習熟コストがかかってしまう課題点があると考えました。本アプリでは、必要最低限の情報で、瞬時に交通情報を見れるようにすることを目標にしました。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Purpose) -->
+
+    <!-- =========================================
+         p-work-detail (Information Architecture)
+         Figma: node-id=4229-5571 "p-work-detail"（2026-09-01再取得）
+         Designセクション同様、本文の下にメインビジュアル（.p-work-detail__img）
+         が付くことが判明したため追加。画像はFormSections/Typography/Icon/Color/
+         Atoms/Buttonをまとめたデザインシステム一覧のスクリーンショット
+         （比率はDesignセクションと同じ約1324:1060のため.p-work-detail__imgを
+         そのまま流用、新規モディファイアは不要）。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Information Architecture</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              交通系アプリを必要最低限の機能に限定し、さらに学生向けのため自分の時間割に合わせたMy時間割機能を入れました。また、プログラマーの効率化やコミュニーケーションを円滑に進めるためにも、重複しているボタンをコンポーネント化しました。
+            </p>
+          </div>
+
+          <div class="p-work-detail__img">
+            <img
+              src="assets/img/p-work-detail__img-app-ia.png"
+              alt="学生向け交通系アプリ Information Architecture"
+              width="1050"
+              height="840"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Information Architecture) -->
+
+    <!-- =========================================
+         p-work-detail (Design)
+         Figma: node-id=4229-5647 "p-work-detail"
+         work-detail.html（バナー練習）のDesignセクションと同じ構成
+         （.p-work-detail__imgあり）。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Design</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              アプリの性質上、画面を見た瞬間に情報が入ってくるようなシンプルなデザインを意識しました。そこで、コントラストがある配色にし、メインカラーでは、情報の信頼感を持たせるために、ライトグリーンを採用しました。また、北海道情報大学のアイデンティティである紺色と緑色の親和性を高めるためにアクセントカラーではネイビーを使いました。さらに、情報の誤読を避けるために、可読性に特化したInterを採用しました。
+            </p>
+          </div>
+
+          <div class="p-work-detail__img">
+            <img
+              src="assets/img/p-work-detail__img-app.webp"
+              alt="学生向け交通系アプリ デザイン"
+              width="1324"
+              height="1060"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Design) -->
+    <!-- =========================================
+         p-others
+         Figma: node-id=4424-1662「p-others」（PC実測）/
+                node-id=4424-1721「p-others」（SP実測）
+         ユーザー指示により、各Work詳細ページの一番下（p-work-detailセクション群の
+         直後）に配置。その他の制作物のサムネイルのみを並べる簡易ギャラリー。
+         1枚目はFigma上も画像未設定（グレーのプレースホルダー）。2〜5枚目は既存
+         カードと同じ画像（学生向け交通系アプリ／ポートフォリオサイト／架空サイト
+         すくすく／ノベルティ制作）を再利用。6枚目のみ既存カードに無い新規
+         ビジュアル（フィットネス系アプリ）のため新規アセットが必要
+         （assets/img/README_assets.md参照）。
+         ========================================= -->
+    <section class="p-others">
+      <div class="p-others__panel">
+        <div class="p-others__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">others</p>
+          </div>
+
+          <div class="p-others__list">
+            <div class="p-others__wrapper-img">
+              <div class="p-others__img"><!-- 画像未設定（プレースホルダー） --></div>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-app.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-app.webp"
+                    alt="学生向け交通系アプリ"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-portfolio.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-portfolio.webp"
+                    alt="ポートフォリオサイト"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-sukusuku.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-sukusuku.webp"
+                    alt="架空サイトすくすく"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-novelty.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-novelty.webp"
+                    alt="ノベルティ制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-detail.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img.webp"
+                    alt="バナー制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-others -->
+
+  </main>
+
+  <!-- =========================================
+       p-footer
+       Figma: node-id=4424-1575「l-footer」（PC実測）/
+              node-id=4424-1956「l-conteiner」（SP実測）
+       ========================================= -->
+  <footer class="l-footer">
+    <div class="p-footer">
+      <div class="p-footer__panel">
+        <div class="p-footer__contact">
+          <p class="p-footer__label">Contact</p>
+          <a href="mailto:s2421160@s.do-johodai.ac.jp" class="p-footer__mail" target="_blank">s2421160@s.do-johodai.ac.jp</a>
+        </div>
+        <p class="p-footer__copyright">&copy; 2026 Kimura Ryusei</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /p-footer -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>架空サイトすくすく | Ryusei Kimura Portfolio</title>
+  <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
+       読み込む。これまで@font-face/リンクが無く、Inter未インストール環境では
+       Helvetica Neue等にフォールバックしており、本文中の英数字部分だけ実機フォントの
+       Mediumが太く見える不具合があったため追加（ユーザー指示「数字や英語のフォントが
+       太くなっているから直して」）。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <!-- =========================================
+       ヘッダー（画面固定）
+       index.html/about.htmlと同じ構造。「Work」を現在地としてactive表示にしている。
+       PC: c-nav（node-id=4229-5406） / SP: c-header（node-id=4244-2772）
+       ========================================= -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      <!-- SP専用: ロゴ + ハンバーガーメニュー -->
+      <div class="c-header">
+        <div class="c-header__bar">
+          <div class="c-header__logo">
+            <img
+              src="assets/img/p-hero__title-bg.png"
+              alt="Ryusei Kimura Portfolio"
+              width="172"
+              height="50"
+            />
+          </div>
+          <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false" data-c-header-toggle>
+            <span class="c-header__menu-icon"></span>
+            <span class="c-header__close-icon"></span>
+          </button>
+        </div>
+        <nav class="c-header__panel" aria-label="サイト内ナビゲーション（モバイル）">
+          <div class="c-header__panel-inner">
+            <div class="c-header__panel-content">
+              <ul class="c-header__nav-list">
+                <li><a href="index.html#hero" class="c-header__nav-item">Home</a></li>
+                <li><a href="index.html#work" class="c-header__nav-item">Work</a></li>
+                <li><a href="about.html" class="c-header__nav-item">About Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- PC専用: ナビゲーションピル -->
+      <nav class="c-nav l-header__nav" aria-label="サイト内ナビゲーション">
+        <a href="index.html#hero" class="c-nav__item">Home</a>
+        <a href="index.html#work" class="c-nav__item c-nav__item--active">Work</a>
+        <a href="about.html" class="c-nav__item">About Me</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /ヘッダー -->
+
+  <main class="l-main">
+    <!-- =========================================
+         p-outline
+         Figma: node-id=4229-5660 "p-outline"（2026-09-01再取得で実データ確認）
+         Work詳細ページ本体（index.htmlの.p-work-list「架空サイトすくすく」
+         カードから遷移する想定）。.p-outlineブロック自体は他ページと共通のため
+         新規CSSは不要（__imgの1050:700.264実測比率も既存の$p-outline-img-*と
+         完全一致）。カテゴリー2つ目のタグはc-category--outline、リード文は
+         冒頭に「授業制作として...」の1文が追加され、spec-listは他ページと
+         同じ使っているソフト/制作期間/メンバー/担当した役割の4項目
+         （使っているソフト・メンバーは.p-outline__spec-text-groupで複数行）
+         と判明したため修正済み。
+         ========================================= -->
+    <section class="p-outline" id="outline">
+      <div class="p-outline__panel">
+        <div class="p-outline__header">
+          <div class="p-outline__title-wrapper">
+            <div class="p-outline__title-bg">
+              <img
+                src="assets/img/p-hero__title-bg.png"
+                alt="Ryusei Kimura Portfolio"
+                width="500"
+                height="145"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="p-outline__inner">
+          <div class="p-outline__heading">
+            <p class="p-outline__title">架空サイトすくすく</p>
+            <ul class="p-outline__category-list">
+              <li class="c-category">#課題制作</li>
+              <li class="c-category c-category--outline">#Webデザイン</li>
+            </ul>
+          </div>
+
+          <p class="p-outline__lead">
+            授業制作として江別市の居住促進のための架空Webサイト制作をしました。江別市転入アンケート調査結果を元に、江別市の課題として『野菜の特産品の認知度の低さ』と『子育て支援の認知度が低い』ことに焦点を当て、取り組みました。
+          </p>
+
+          <div class="p-outline__spec-list">
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">使っているソフト</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">Figma</p>
+                <p class="p-outline__spec-text">Illustrator</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">制作期間</p>
+              <p class="p-outline__spec-text">7週間</p>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">メンバー</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">デザイナー</p>
+                <p class="p-outline__spec-text">プログラマー</p>
+                <p class="p-outline__spec-text">ディレクター</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">担当した役割</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">デザイナー</p>
+                <p class="p-outline__spec-text">プログラマー</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-outline__img-wrapper">
+            <div class="p-outline__img">
+              <img
+                src="assets/img/p-outline__img-sukusuku.webp"
+                alt="架空サイトすくすく"
+                width="1050"
+                height="700"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-outline -->
+
+    <!-- =========================================
+         p-work-detail (Target)
+         Figma: node-id=4229-5661 "p-work-detail"（2026-09-01再取得）
+         Purpose/Concept/Designと同じ.p-work-detailブロックを流用。
+         Designセクション同様、本文の下にペルソナシート画像
+         （.p-work-detail__img）が付くことが判明したため追加。
+         比率はDesignセクションと同じ約1324:1060のため.p-work-detail__imgを
+         そのまま流用、新規モディファイアは不要。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Target</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              東京都内で夫と4歳の息子と暮らす、料理好きな専業主婦の佐藤咲良さん（32歳）。朝のランニングと日々のレシピ研究が日課ですが、現在は「息子の野菜嫌いを克服するため、バレずに食べられる料理を作る」ことに苦戦中。将来的には主婦業を続けながら、自身の料理教室を開くこと。
+            </p>
+          </div>
+
+          <div class="p-work-detail__img">
+            <img
+              src="assets/img/p-work-detail__img-sukusuku-persona.png"
+              alt="架空サイトすくすく ペルソナシート"
+              width="1050"
+              height="840"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Target) -->
+
+    <!-- =========================================
+         p-work-detail (Purpose)
+         Figma: node-id=4229-5662 "p-work-detail"
+         Target（node-id=4229-5661）と全く同じ構造・見た目のため、
+         .p-work-detailブロックをそのまま流用している。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Purpose</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              江別市の課題解決を通じて魅力を市外へ発信し、移住・定住へ繋げること
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Purpose) -->
+
+    <!-- =========================================
+         p-work-detail (Concept)
+         Figma: node-id=4229-5663 "p-work-detail"
+         work-app.htmlのPurposeセクション（node-id=4229-5570）と同じく
+         __heading（大見出し40px）＋__text（説明文20px）の2段構成。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Concept</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__heading">
+              江別市でみつける、野菜と育つ「のびのび子育て」
+            </p>
+            <p class="p-work-detail__text">
+              ターゲットの悩みである『子供の野菜嫌いの解決』と『自然の環境で育てたい思い』と江別市の課題である『野菜の特産品の認知度の低さ』と『子育て支援の認知度が低い』ことの二つのからWebサイトでの食育体験の紹介で、現状を解決しようと考えた。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Concept) -->
+
+    <!-- =========================================
+         p-work-detail (Design)
+         Figma: node-id=4229-5664 "p-work-detail"
+         __bodyは<p>3つ（各margin-bottom:0・追加余白なし）で構成されていたため、
+         __body直下ではなく.p-work-detail__text-group（余白なしラッパー）で
+         まとめている。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Design</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <div class="p-work-detail__text-group">
+              <p class="p-work-detail__text">
+                本サイトのデザインでは、大人から子どもまで幅広い層に親しんでもらえるよう、難しい漢字を避けた表記や、温かみのあるタッチのイラストを採用しました。
+              </p>
+              <p class="p-work-detail__text">
+                カラー計画では、江別市の豊かな自然をダイレクトに表現するため、深みのある「フォレストグリーン」をメインカラーに設定。さらに、ユーザーの目を引く遊び心あるWeb演出として、トップページ上層ではスクロールに連動して山が追従する視覚効果（パララックス効果）を設計しました。
+              </p>
+              <p class="p-work-detail__text">
+                地域のアイデンティティを表現しつつ、直感的に楽しめるUI/UXを追求しています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Design) -->
+
+    <!-- =========================================
+         p-work-detail（画像のみ／Designとは別項目）
+         Figma: node-id=4384-2978「スケジュール 2」（749×4159pxの縦長1枚絵。
+           架空サイト「sukusuku」のWebページ全体モックアップスクリーンショットを
+           約126個のマスクベクターレイヤーに分解したもの）
+         ユーザー指示「designと別の項目にして」により、Designセクション
+         （テキスト: node-id=4229-5664）とは独立した.p-work-detailセクション
+         として分離。Figma上もこのノード自体にc-section-title/__bodyは無く
+         画像のみの構成のため、__innerに.p-work-detail__imgのみを配置している。
+         通常のDesign画像（1324:1060比率）とは全く異なる縦長比率のため、
+         .p-work-detail__img--mockupモディファイアで比率のみ上書き。
+         元はFigma由来のSVG（749×4159、約126レイヤーの複雑なベクター構成）で、
+         このサンドボックス環境ではラスタライズ手段が無くWebP変換ができな
+         かったため、ユーザーから実サイトの全体スクリーンショット（901×4999）
+         を直接提供してもらい、それをWebPとして採用した（画像差し替えに伴い
+         width/heightとSCSS側の比率もこの実測値に更新済み）。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="p-work-detail__img p-work-detail__img--mockup">
+            <img
+              src="assets/img/p-work-detail__img-sukusuku.webp"
+              alt="架空サイトすくすく デザイン"
+              width="901"
+              height="4999"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail（画像のみ） -->
+    <!-- =========================================
+         p-others
+         Figma: node-id=4424-1662「p-others」（PC実測）/
+                node-id=4424-1721「p-others」（SP実測）
+         ユーザー指示により、各Work詳細ページの一番下（p-work-detailセクション群の
+         直後）に配置。その他の制作物のサムネイルのみを並べる簡易ギャラリー。
+         1枚目はFigma上も画像未設定（グレーのプレースホルダー）。2〜5枚目は既存
+         カードと同じ画像（学生向け交通系アプリ／ポートフォリオサイト／架空サイト
+         すくすく／ノベルティ制作）を再利用。6枚目のみ既存カードに無い新規
+         ビジュアル（フィットネス系アプリ）のため新規アセットが必要
+         （assets/img/README_assets.md参照）。
+         ========================================= -->
+    <section class="p-others">
+      <div class="p-others__panel">
+        <div class="p-others__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">others</p>
+          </div>
+
+          <div class="p-others__list">
+            <div class="p-others__wrapper-img">
+              <div class="p-others__img"><!-- 画像未設定（プレースホルダー） --></div>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-app.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-app.webp"
+                    alt="学生向け交通系アプリ"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-portfolio.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-portfolio.webp"
+                    alt="ポートフォリオサイト"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-sukusuku.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-sukusuku.webp"
+                    alt="架空サイトすくすく"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-novelty.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-novelty.webp"
+                    alt="ノベルティ制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-detail.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img.webp"
+                    alt="バナー制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-others -->
+
+  </main>
+
+  <!-- =========================================
+       p-footer
+       Figma: node-id=4424-1575「l-footer」（PC実測）/
+              node-id=4424-1956「l-conteiner」（SP実測）
+       ========================================= -->
+  <footer class="l-footer">
+    <div class="p-footer">
+      <div class="p-footer__panel">
+        <div class="p-footer__contact">
+          <p class="p-footer__label">Contact</p>
+          <a href="mailto:s2421160@s.do-johodai.ac.jp" class="p-footer__mail" target="_blank">s2421160@s.do-johodai.ac.jp</a>
+        </div>
+        <p class="p-footer__copyright">&copy; 2026 Kimura Ryusei</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /p-footer -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

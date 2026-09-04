@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>バナー練習 | Ryusei Kimura Portfolio</title>
+  <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
+       読み込む。これまで@font-face/リンクが無く、Inter未インストール環境では
+       Helvetica Neue等にフォールバックしており、本文中の英数字部分だけ実機フォントの
+       Mediumが太く見える不具合があったため追加（ユーザー指示「数字や英語のフォントが
+       太くなっているから直して」）。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <!-- =========================================
+       ヘッダー（画面固定）
+       index.html/about.htmlと同じ構造。「Work」を現在地としてactive表示にしている。
+       PC: c-nav（node-id=4229-5406） / SP: c-header（node-id=4244-2772）
+       ========================================= -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      <!-- SP専用: ロゴ + ハンバーガーメニュー -->
+      <div class="c-header">
+        <div class="c-header__bar">
+          <div class="c-header__logo">
+            <img
+              src="assets/img/p-hero__title-bg.png"
+              alt="Ryusei Kimura Portfolio"
+              width="172"
+              height="50"
+            />
+          </div>
+          <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false" data-c-header-toggle>
+            <span class="c-header__menu-icon"></span>
+            <span class="c-header__close-icon"></span>
+          </button>
+        </div>
+        <nav class="c-header__panel" aria-label="サイト内ナビゲーション（モバイル）">
+          <div class="c-header__panel-inner">
+            <div class="c-header__panel-content">
+              <ul class="c-header__nav-list">
+                <li><a href="index.html#hero" class="c-header__nav-item">Home</a></li>
+                <li><a href="index.html#work" class="c-header__nav-item">Work</a></li>
+                <li><a href="about.html" class="c-header__nav-item">About Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- PC専用: ナビゲーションピル -->
+      <nav class="c-nav l-header__nav" aria-label="サイト内ナビゲーション">
+        <a href="index.html#hero" class="c-nav__item">Home</a>
+        <a href="index.html#work" class="c-nav__item c-nav__item--active">Work</a>
+        <a href="about.html" class="c-nav__item">About Me</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /ヘッダー -->
+
+  <main class="l-main">
+    <!-- =========================================
+         p-outline
+         Figma: node-id=4229-5455 "p-outline"
+         Work詳細ページ本体（index.htmlの.p-work-list各カードから遷移する想定）。
+         ========================================= -->
+    <section class="p-outline" id="outline">
+      <div class="p-outline__panel">
+        <div class="p-outline__header">
+          <div class="p-outline__title-wrapper">
+            <div class="p-outline__title-bg">
+              <img
+                src="assets/img/p-hero__title-bg.png"
+                alt="Ryusei Kimura Portfolio"
+                width="500"
+                height="145"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="p-outline__inner">
+          <div class="p-outline__heading">
+            <p class="p-outline__title">バナー練習</p>
+            <ul class="p-outline__category-list">
+              <li class="c-category">#自主制作</li>
+              <li class="c-category c-category--outline">#架空バナー</li>
+            </ul>
+          </div>
+
+          <p class="p-outline__lead">
+            デザインの基礎力を高めるために、バナーデザイン練習サイトを利用し、クラブ促進バナーを制作しました。
+             <a
+              href="https://pattomi-tsugaku.vercel.app/"
+              class="p-outline__lead-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >https://www.webcreatorbox.com/blog/banner-design-10</a>
+          </p>
+
+          <div class="p-outline__spec-list">
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">使っているソフト</p>
+              <div class="p-outline__spec-text-group p-outline__spec-text-group--inline-sp">
+                <p class="p-outline__spec-text">Figma</p>
+                <p class="p-outline__spec-text">Illustrator</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">制作期間</p>
+              <p class="p-outline__spec-text">2時間</p>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">メンバー</p>
+              <p class="p-outline__spec-text">デザイナー</p>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">担当した役割</p>
+              <p class="p-outline__spec-text">デザイナー</p>
+            </div>
+          </div>
+
+          <div class="p-outline__img-wrapper">
+            <div class="p-outline__img">
+              <img
+                src="assets/img/p-outline__img.webp"
+                alt="バナー練習"
+                width="1050"
+                height="700"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-outline -->
+
+    <!-- =========================================
+         p-work-detail
+         Figma: node-id=4229-5456 "p-work-detail"
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Target</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              スポーツが好きで平日の仕事前後や週末も活発にトレーニングしている。ランニングのレースにも出場する。自己流トレーニングに限界を感じている。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Target) -->
+
+    <!-- =========================================
+         p-work-detail (Purpose)
+         Figma: node-id=4229-5457 "p-work-detail"
+         Target（node-id=4229-5456）と全く同じ構造・見た目のため、
+         .p-work-detailブロックをそのまま流用している。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Purpose</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              普段は高齢者向けのウォーキングイベントや子供向けの運動教室をしているが、本格的にスポーツに取り組む大人向けのメニューも充実させること
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Purpose) -->
+
+    <!-- =========================================
+         p-work-detail (Design)
+         Figma: node-id=4229-5555 "p-work-detail"
+         Target/Purposeと同じ.p-work-detailブロックに、メインビジュアル
+         （.p-work-detail__img）を追加した構成。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Design</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              被写体の目線に合わせて文字を斜めに配置し、躍動感を表現しました。またサブテキストを背景色と補色関係にすることで視認性を高め、バナーを見た時に一番身入るような工夫をしました。
+            </p>
+          </div>
+
+          <div class="p-work-detail__img">
+            <img
+              src="assets/img/p-work-detail__img.png"
+              alt="バナー練習 デザイン"
+              width="1324"
+              height="1060"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Design) -->
+    <!-- =========================================
+         p-others
+         Figma: node-id=4424-1662「p-others」（PC実測）/
+                node-id=4424-1721「p-others」（SP実測）
+         ユーザー指示により、各Work詳細ページの一番下（p-work-detailセクション群の
+         直後）に配置。その他の制作物のサムネイルのみを並べる簡易ギャラリー。
+         1枚目はFigma上も画像未設定（グレーのプレースホルダー）。2〜5枚目は既存
+         カードと同じ画像（学生向け交通系アプリ／ポートフォリオサイト／架空サイト
+         すくすく／ノベルティ制作）を再利用。6枚目のみ既存カードに無い新規
+         ビジュアル（フィットネス系アプリ）のため新規アセットが必要
+         （assets/img/README_assets.md参照）。
+         ========================================= -->
+    <section class="p-others">
+      <div class="p-others__panel">
+        <div class="p-others__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">others</p>
+          </div>
+
+          <div class="p-others__list">
+            <div class="p-others__wrapper-img">
+              <div class="p-others__img"><!-- 画像未設定（プレースホルダー） --></div>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-app.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-app.webp"
+                    alt="学生向け交通系アプリ"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-portfolio.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-portfolio.webp"
+                    alt="ポートフォリオサイト"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-sukusuku.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-sukusuku.webp"
+                    alt="架空サイトすくすく"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-novelty.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-novelty.webp"
+                    alt="ノベルティ制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-detail.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img.webp"
+                    alt="バナー制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-others -->
+
+  </main>
+
+  <!-- =========================================
+       p-footer
+       Figma: node-id=4424-1575「l-footer」（PC実測）/
+              node-id=4424-1956「l-conteiner」（SP実測）
+       ========================================= -->
+  <footer class="l-footer">
+    <div class="p-footer">
+      <div class="p-footer__panel">
+        <div class="p-footer__contact">
+          <p class="p-footer__label">Contact</p>
+          <a href="mailto:s2421160@s.do-johodai.ac.jp" class="p-footer__mail" target="_blank">s2421160@s.do-johodai.ac.jp</a>
+        </div>
+        <p class="p-footer__copyright">&copy; 2026 Kimura Ryusei</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /p-footer -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
