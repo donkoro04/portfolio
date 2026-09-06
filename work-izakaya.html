@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>クライアント様　サイトリニューアル(制作途中） | Ryusei Kimura Portfolio</title>
+  <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
+       読み込む。work-detail.html等、他のWork詳細ページと同じ構成。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <!-- =========================================
+       ヘッダー（画面固定）
+       index.html/about.htmlと同じ構造。「Work」を現在地としてactive表示にしている。
+       PC: c-nav（node-id=4229-5406） / SP: c-header（node-id=4244-2772）
+       ========================================= -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      <!-- SP専用: ロゴ + ハンバーガーメニュー -->
+      <div class="c-header">
+        <div class="c-header__bar">
+          <a href="index.html" class="c-header__logo" aria-label="Ryusei Kimura Portfolio">
+            <img
+              src="assets/img/p-hero__title-bg.png"
+              alt="Ryusei Kimura Portfolio"
+              width="172"
+              height="50"
+            />
+          </a>
+          <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false" data-c-header-toggle>
+            <span class="c-header__menu-icon"></span>
+            <span class="c-header__close-icon"></span>
+          </button>
+        </div>
+        <nav class="c-header__panel" aria-label="サイト内ナビゲーション（モバイル）">
+          <div class="c-header__panel-inner">
+            <div class="c-header__panel-content">
+              <ul class="c-header__nav-list">
+                <li><a href="index.html#hero" class="c-header__nav-item">Home</a></li>
+                <li><a href="index.html#work" class="c-header__nav-item">Work</a></li>
+                <li><a href="about.html" class="c-header__nav-item">About Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- PC専用: ナビゲーションピル -->
+      <nav class="c-nav l-header__nav" aria-label="サイト内ナビゲーション">
+        <a href="index.html#hero" class="c-nav__item">Home</a>
+        <a href="index.html#work" class="c-nav__item c-nav__item--active">Work</a>
+        <a href="about.html" class="c-nav__item">About Me</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /ヘッダー -->
+
+  <main class="l-main">
+    <!-- =========================================
+         p-outline
+         Figma: node-id=4481-1347 "p-outline"
+         クライアント様（アルバイト先の海鮮居酒屋）のサイトリニューアル案件。
+         現在も制作途中のため、&__imgはFigma上も実画像が未設定（グレーの
+         プレースホルダー）のまま。.p-outline__imgに背景色
+         （bg-placeholder）を追加して対応した（.p-others__img等、他の
+         「画像未設定」箇所と同じ考え方）。
+         ========================================= -->
+    <section class="p-outline" id="outline">
+      <div class="p-outline__panel">
+        <div class="p-outline__header">
+          <div class="p-outline__title-wrapper">
+            <div class="p-outline__title-bg">
+              <img
+                src="assets/img/p-hero__title-bg.png"
+                alt="Ryusei Kimura Portfolio"
+                width="500"
+                height="145"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="p-outline__inner">
+          <div class="p-outline__heading">
+            <p class="p-outline__title">クライアント様　サイトリニューアル(制作途中）</p>
+            <ul class="p-outline__category-list">
+              <li class="c-category">#クライアントワーク</li>
+              <li class="c-category c-category--outline">#Webデザイン</li>
+            </ul>
+          </div>
+
+          <p class="p-outline__lead">
+            私が、働いているアルバイト先のWebサイトをリニューアルしています。<br />
+            デザインの刷新だけでなく、現状のサイトの課題を洗い出し、リニューアルをする事の効果を分析した上で、制作しています
+          </p>
+
+          <div class="p-outline__spec-list">
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">使っているソフト</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">Figma</p>
+                <p class="p-outline__spec-text">Illustrator</p>
+                <p class="p-outline__spec-text">miro</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">制作期間</p>
+              <p class="p-outline__spec-text">製作中</p>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">メンバー</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">デザイナー</p>
+                <p class="p-outline__spec-text">プログラマー</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">担当した役割</p>
+              <p class="p-outline__spec-text">デザイナー</p>
+            </div>
+          </div>
+
+          <div class="p-outline__img-wrapper">
+            <div class="p-outline__img"><!-- 画像未設定（制作途中のため未確定・プレースホルダー） --></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-outline -->
+
+    <!-- =========================================
+         p-work-detail (Target)
+         Figma: node-id=4481-1348 "p-work-detail"
+         __bodyは大見出し（40px）＋説明文2段落（各margin-bottom:0）の構成。
+         node-id=4229-5570等と同じ__heading、node-id=4229-5664と同じ
+         __text-group（余白なしラッパー）を組み合わせている。
+         Figma上は__body直下に参考画像（ポジショニングマップのスクリーンショット、
+         1050×840実測）も付随。サンドボックス環境からFigmaの画像CDNに直接
+         アクセスできず自動ダウンロードができなかったため一旦プレースホルダーに
+         していたが、2026-09-06にユーザーから実画像（ポジショニングマップの
+         スクリーンショット）を受け取り、p-work-detail__img-izakaya-target.webp
+         として追加した。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Target</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__heading">
+              一人で出張に来た40~50代のサラリーマンと旅行に来た外国人観光客。
+            </p>
+            <div class="p-work-detail__text-group">
+              <p class="p-work-detail__text">
+                私の働いている知見として、出張客としてくるお客様の割合が高く、他店との差別化ポイントであるカウンターのある海鮮居酒屋を打ち出し、ターゲットを40~50代のサラリーマンとすることで、新規顧客獲得見込めるのではないかと推測しました。
+              </p>
+              <p class="p-work-detail__text">
+                また、価格帯 × ターゲット層のポジショニングマップを使用した結果、低価格 × 観光客向けのスペースが空いており、多言語対応のしたリニューアルをすることにより、外国人観光客がくると考えました。
+              </p>
+            </div>
+          </div>
+
+          <div class="p-work-detail__img">
+            <img
+              src="assets/img/p-work-detail__img-izakaya-target.webp"
+              alt="価格帯×ターゲット層のポジショニングマップ"
+              width="1050"
+              height="840"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Target) -->
+
+    <!-- =========================================
+         p-work-detail (Issue)
+         Figma: node-id=4481-1349 "p-work-detail"
+         このプロジェクトで新規に登場したセクション見出し。既存の
+         Target/Purpose等と同じ__body（説明文1段落のみ）の構成のため、
+         新規CSSは追加せず既存の.p-work-detailブロックをそのまま流用した。
+         Target同様、__body直下に参考画像（サイト課題をまとめた資料の
+         スクリーンショット、1050×840実測）が付随。同じ理由で一旦
+         プレースホルダーにしていたが、2026-09-06にユーザーから実画像を
+         受け取り、p-work-detail__img-izakaya-issue.webpとして追加した。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Issue</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__text">
+              SEO自体に問題はありませんでしたが、サイト更新日が７年前ということがあり、使われている料理の写真が現在提供している食べ物とは、違うものが使われている現状課題がありました。
+            </p>
+          </div>
+
+          <div class="p-work-detail__img">
+            <img
+              src="assets/img/p-work-detail__img-izakaya-issue.webp"
+              alt="サイト課題をまとめた資料"
+              width="1050"
+              height="840"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Issue) -->
+
+    <!-- =========================================
+         p-work-detail (Concept)
+         Figma: node-id=4481-1350 "p-work-detail"
+         node-id=4229-5663等と同じ__heading（40px）＋__text（20px）の2段構成。
+         ========================================= -->
+    <section class="p-work-detail">
+      <div class="p-work-detail__panel">
+        <div class="p-work-detail__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Concept</p>
+          </div>
+
+          <div class="p-work-detail__body">
+            <p class="p-work-detail__heading">
+              昔ながらの温もりがある居酒屋〇〇店
+            </p>
+            <p class="p-work-detail__text">
+              昔から地元から愛されている老舗居酒屋という側面をサイト上で伝えるべきだと考えました。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-detail (Concept) -->
+
+    <!-- =========================================
+         p-others
+         Figma: node-id=4481-1356「p-others」
+         node-id=4424-1662（PC実測）/ node-id=4424-1721（SP実測）と同じ構造。
+         このプロジェクト自体がまだ制作途中で確定画像が無いため、1枚目
+         （画像未設定プレースホルダー）を本ページへのリンクにした
+         （2026-09-06: 従来はリンク無しの単なるプレースホルダーだったが、
+         このクライアント案件の追加に伴いwork-izakaya.htmlへのリンクに変更。
+         全Work詳細ページで同様に更新している）。
+         ========================================= -->
+    <section class="p-others">
+      <div class="p-others__panel">
+        <div class="p-others__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">others</p>
+          </div>
+
+          <div class="p-others__list">
+            <div class="p-others__wrapper-img">
+              <a href="work-izakaya.html" class="p-others__link">
+                <div class="p-others__img"><!-- 画像未設定（制作途中のためプレースホルダー） --></div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-app.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-app.webp"
+                    alt="学生向け交通系アプリ"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-portfolio.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-portfolio.webp"
+                    alt="ポートフォリオサイト"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-sukusuku.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-sukusuku.webp"
+                    alt="架空サイトすくすく"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-novelty.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-novelty.webp"
+                    alt="ノベルティ制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-detail.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img.webp"
+                    alt="バナー制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-others -->
+
+  </main>
+
+  <!-- =========================================
+       p-footer
+       Figma: node-id=4424-1575「l-footer」（PC実測）/
+              node-id=4424-1956「l-conteiner」（SP実測）
+       ========================================= -->
+  <footer class="l-footer">
+    <div class="p-footer">
+      <div class="p-footer__panel">
+        <div class="p-footer__contact">
+          <p class="p-footer__label">Contact</p>
+          <a href="mailto:s2421160@s.do-johodai.ac.jp" class="p-footer__mail" target="_blank">s2421160@s.do-johodai.ac.jp</a>
+        </div>
+        <p class="p-footer__copyright">&copy; 2026 Kimura Ryusei</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /p-footer -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
