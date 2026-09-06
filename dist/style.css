@@ -1176,7 +1176,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-skill__inner {
-    gap: 120px;
+    gap: 60px;
   }
 }
 .p-skill__text {
