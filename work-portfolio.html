@@ -247,7 +247,7 @@
       <div class="p-work-thework__panel">
         <div class="p-work-thework__img-pc">
           <img
-            src="assets/img/p-work-thework__img-pc.webp"
+            src="assets/img/p-work-thework__img-pc.png"
             alt="ポートフォリオサイト（PC版）のスクリーンショット"
             width="857"
             height="1510"
@@ -255,7 +255,7 @@
         </div>
         <div class="p-work-thework__img-sp">
           <img
-            src="assets/img/p-work-thework__img-sp.webp"
+            src="assets/img/p-work-thework__img-sp.png"
             alt="ポートフォリオサイト（SP版）のスクリーンショット"
             width="479"
             height="4096"
@@ -271,7 +271,11 @@
                 node-id=4424-1721「p-others」（SP実測）
          ユーザー指示により、各Work詳細ページの一番下（p-work-detailセクション群の
          直後）に配置。その他の制作物のサムネイルのみを並べる簡易ギャラリー。
-         1枚目はFigma上も画像未設定（グレーのプレースホルダー）。2〜5枚目は既存
+         1枚目はFigma上も画像未設定（グレーのプレースホルダー）。2026-09-06:
+         node-id=4481-1356で新規クライアント案件（work-izakaya.html。制作途中の
+         ため確定画像は無いまま）へのリンクとして扱うことになったため、
+         プレースホルダー表示のままwork-izakaya.htmlへの<a>を追加した。
+         2〜5枚目は既存
          カードと同じ画像（学生向け交通系アプリ／ポートフォリオサイト／架空サイト
          すくすく／ノベルティ制作）を再利用。6枚目のみ既存カードに無い新規
          ビジュアル（フィットネス系アプリ）のため新規アセットが必要
@@ -288,7 +292,9 @@
 
           <div class="p-others__list">
             <div class="p-others__wrapper-img">
-              <div class="p-others__img"><!-- 画像未設定（プレースホルダー） --></div>
+              <a href="work-izakaya.html" class="p-others__link">
+                <div class="p-others__img"><!-- 画像未設定（制作途中のためプレースホルダー） --></div>
+              </a>
             </div>
             <div class="p-others__wrapper-img">
               <a href="work-app.html" class="p-others__link">
