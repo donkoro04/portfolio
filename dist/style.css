@@ -1237,7 +1237,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-strength__inner {
-    gap: 120px;
+    gap: 60px;
   }
 }
 .p-strength__list {
