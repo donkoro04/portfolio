@@ -140,131 +140,268 @@
     <!-- /p-outline -->
 
     <!-- =========================================
-         p-work-detail (Target)
-         Figma: node-id=4235-2220 "p-work-detail"
-         他ページ（work-detail.html/work-app.html）と共通の.p-work-detailブロックを流用。
+         p-work-novelty (Background,Story)
+         Figma: node-id=4655-1887「p-work-novelty--03」（2026-09-25再取得）
+         旧: Target/Purpose/Conceptの3セクションに分かれていたが、Figma刷新に
+         伴い「Background,Story」1セクション内に「リサーチ」「ターゲット」
+         「コンセプト」の中見出し（.p-work-novelty__heading-32）付きブロックと
+         してまとめる構成に変更。リサーチ節・ターゲット節のスクリーンショット
+         3点はFigma CDN（figma.com）がサンドボックスから到達不可のため
+         取得できず、既存の「画像未設定」慣例（bg-placeholder）を適用していたが、
+         2026-09-26追記3: ユーザーから実画像2点（企業リサーチの付箋ボード、
+         ノベルティキーワード表）を受領したためリサーチ節の2枚を実装済みに
+         更新。いずれもスライド書き出し画像で四隅が丸角マスク処理された
+         状態（透過あり）で受領したため、透過処理は追加せずそのまま採用。
+         2026-09-26追記4: ターゲット節のDECAXモデル図（3点目のスクリーンショット）
+         もユーザーから受領したため実装済みに更新。これでリサーチ/ターゲット
+         両節のスクリーンショット3点すべてが実画像になった。
+         2026-09-26追記5: コンセプト節の2枚組（--concept）画像もユーザーから
+         受領（第3回事後課題「企画コンセプト」スライド／第4回事後課題
+         「企画書まとめ」スライド）したため実装済みに更新。これで
+         Background,Storyセクションの全画像が実装完了。
+         コンセプト節の本文はFigma更新に合わせて末尾を修正（旧:「...HBAの
+         理念を強く印象づけます。」→新:「...HBAの理念を強く印象づけることを
+         目標としました。」）。
+         2026-09-25追記2: フォント/gap実測に基づき、リサーチ/ターゲット/
+         コンセプトの3グループを束ねるラッパー（__body--gap-120）と、各
+         グループ内の見出し→内容のラッパー（__body--gap-60）を追加。
+         ターゲット節はリサーチ節と同じ「gap-36の縦積みグループ」のため
+         __colを1カラムのまま再利用。コンセプト節は見出し28+本文+row用に
+         __body--gap-36の子ラッパーを追加した。
+         2026-09-26追記10: node-id=4655-2076「1.企業リサーチ」/
+         node-id=4655-2085「2.ノベルティを通じて伝えることをキーワード化」を
+         再取得し、リサーチ節の実装内容を検証。画像2点・本文は完全一致を確認。
+         ただし以下2点の差異を発見し修正:
+           ・2枚目の見出しテキストが「ノベルティを通じて伝えるキーワード化」
+             になっていたが、Figma実測は「ノベルティを通じて伝えることを
+             キーワード化」（「ことを」が抜けていた）。
+           ・Figma上は1つの<ol>が1番目「企業リサーチ」・2番目「ノベルティ
+             を通じて伝えることをキーワード化」と連番になっているが、実装は
+             __col毎に独立した<ol>だったため2枚目が「1.」と誤表示されていた。
+             2枚目の<ol>にstart="2"を追加して連番を再現した。
+         2026-09-26追記11: node-id=4655-1918「ターゲット」節を再取得し文章を
+         再確認。Figma更新に伴い本文が変更されていたため修正:
+           旧:「...接触機会に着目。ノベルティを受け取った相手（Discovery）が、
+           企業の理解・購買（eXperience）へ至るまでの心理変化と行動プロセスを
+           チームで多角的にシミュレーションし、デザインへ落とし込んでいます。」
+           新:「...接触機会に着目し、ノベルティを受け取った相手が、企業の
+           理解・購買へ至るまでの心理変化と行動プロセスを考えました。」
+           （DECAXの頭字語注記(Discovery)(eXperience)と文末の言い回しが
+           Figma側でシンプルな表現に整理されていたため追従。見出し・画像は
+           変更なし。）
+         2026-09-26追記12: ユーザー指示「先頭の1を消して欲しい」により、
+         ターゲット節の小見出し「ターゲットの性格・行動特性をもとに購買
+         行動モデルを考える。」を <ol class="p-work-novelty__list"><li>
+         （連番マーカー「1.」表示）から、既存の <p class="p-work-novelty
+         __heading-24">（初期案見出し等で使用中の24px太字見出しクラス）に
+         変更し、先頭の番号表示をなくした。リサーチ節の2項目連番リスト
+         （企業リサーチ/ノベルティを通じて伝えることをキーワード化）は
+         対象外で変更していない。
          ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
+    <section class="p-work-novelty">
+      <div class="p-work-novelty__panel">
+        <div class="p-work-novelty__inner">
           <div class="c-section-title">
-            <p class="c-section-title__title">Target</p>
+            <p class="c-section-title__title">Background,Story</p>
           </div>
 
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__text">
-              ビジネスパーソンやその家族で、食卓や会社のデスクで使っていただくこと。
-            </p>
+          <div class="p-work-novelty__body p-work-novelty__body--gap-120">
+            <div class="p-work-novelty__body p-work-novelty__body--gap-60">
+              <p class="p-work-novelty__heading-32">リサーチ</p>
+              <div class="p-work-novelty__row">
+                <div class="p-work-novelty__col">
+                  <ol class="p-work-novelty__list">
+                    <li>企業リサーチ</li>
+                  </ol>
+                  <div class="p-work-novelty__img p-work-novelty__img--screenshot">
+                    <img
+                      src="assets/img/p-work-novelty__research-company.webp"
+                      alt="企業リサーチ（企業・ブランドの特徴／大切にしている価値／現状を見て気づいたこと）"
+                      width="1524"
+                      height="862"
+                    />
+                  </div>
+                  <p class="p-work-novelty__text">
+                    まずは企業が何をしている会社なのか理解するためにパンフレットやホームページ、記事などを隅々まで読み「企業、ブランドの価値」「大切にしている価値」「現状見て気付いたこと」の３つの項目に分けて調べました。
+                  </p>
+                </div>
+                <div class="p-work-novelty__col">
+                  <ol class="p-work-novelty__list" start="2">
+                    <li>ノベルティで伝えることをキーワード化</li>
+                  </ol>
+                  <div class="p-work-novelty__img p-work-novelty__img--screenshot">
+                    <img
+                      src="assets/img/p-work-novelty__research-keyword.webp"
+                      alt="HBAがノベルティを通じて伝えるべきキーワード（バラマキ用／プレミアム用）"
+                      width="1524"
+                      height="862"
+                    />
+                  </div>
+                  <p class="p-work-novelty__text">
+                    調べた企業の情報をもとに、HBAがノベルティ使用を通じて伝えるべきキーワードをばらまき用とプレミアム用でか各３つずつ考えました。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-work-novelty__body p-work-novelty__body--gap-60">
+              <p class="p-work-novelty__heading-32">ターゲット</p>
+              <div class="p-work-novelty__col">
+                <p class="p-work-novelty__heading-24">ターゲットの性格・行動特性をもとに購買行動モデルを考える。</p>
+                <p class="p-work-novelty__text">
+                  ノベルティ施策の効果を高めるため、架空のペルソナ設定と購買行動モデル「DECAX」を用いたユーザー行動の設計を行いました。本企画では「来訪者との会議や対談時に手渡す」という対面での接触機会に着目し、ノベルティを受け取った相手が、企業の理解・購買へ至るまでの心理変化と行動プロセスを考えました。
+                </p>
+                <div class="p-work-novelty__img p-work-novelty__img--screenshot">
+                  <img
+                    src="assets/img/p-work-novelty__research-decax.webp"
+                    alt="提案B（プレミアム用）：ペルソナとDECAXモデル"
+                    width="3150"
+                    height="1781"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="p-work-novelty__body p-work-novelty__body--gap-60">
+              <p class="p-work-novelty__heading-32">コンセプト</p>
+              <div class="p-work-novelty__body p-work-novelty__body--gap-36">
+                <p class="p-work-novelty__heading-28">２種類のふりかけを瓶に自分で入れる。</p>
+                <p class="p-work-novelty__text">
+                  パッケージに同梱された「二色のふりかけ」を混ぜ合わせるというユニークな体験を通じて、「HBA×他業種」、そして「IT×ヒューマニティ（人間らしさ・食）」の融合というHBAの理念を強く印象づけることを目標としました。
+                </p>
+                <div class="p-work-novelty__row p-work-novelty__row--concept">
+                  <div class="p-work-novelty__img p-work-novelty__img--concept">
+                    <img
+                      src="assets/img/p-work-novelty__concept-summary1.webp"
+                      alt="企画コンセプト（第3回事後課題）：ノベルティ名・キャッチコピー・キーワード"
+                      width="1551"
+                      height="871"
+                    />
+                  </div>
+                  <div class="p-work-novelty__img p-work-novelty__img--concept">
+                    <img
+                      src="assets/img/p-work-novelty__concept-summary2.webp"
+                      alt="企画書まとめ（第4回事後課題）：背景・ターゲット設定・ノベルティ企画内容・コンセプト・デザインパッケージ案・期待される効果・実現可能性"
+                      width="1551"
+                      height="871"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /p-work-detail (Target) -->
+    <!-- /p-work-novelty (Background,Story) -->
 
     <!-- =========================================
-         p-work-detail (Purpose)
-         Figma: node-id=4235-2221 "p-work-detail"
-         Target同様.p-work-detailブロックを流用。
+         p-work-novelty (Design)
+         Figma: node-id=4655-1887「p-work-novelty--03」内Designブロック
+         （2026-09-25再取得）。既存の導入テキストはFigmaと完全一致のため
+         そのまま維持しつつ、新たに「初期案」（見出し＋説明文＋正方形の
+         ラフ案画像）「完成案」（見出し＋既存の最終デザイン画像を再利用）
+         の2ブロックを追加した。初期案画像はFigma CDNから取得不可のため
+         プレースホルダーとしていたが、2026-09-26追記7でユーザー提供の
+         デザイン画像（p-work-detail__img-novelty-sketch.webp）に差し替え済み。
+         2026-09-25追記2: __innerのgap（36px）はこのDesign節のみ他節と異なる
+         実測値のため__inner--gap-36を適用。導入文/初期案/完成案の3つを
+         束ねる最上位ラッパー（__body--gap-72）と、初期案・完成案それぞれの
+         内部ラッパー（__body--gap-36）をフォント/gap実測に基づき追加した。
          ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
-          <div class="c-section-title">
-            <p class="c-section-title__title">Purpose</p>
-          </div>
-
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__text">
-              ノベルティの配布による、企業認知の向上。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /p-work-detail (Purpose) -->
-
-    <!-- =========================================
-         p-work-detail (Concept)
-         Figma: node-id=4235-2222 "p-work-detail"
-         Target/Purposeと同じ.p-work-detailブロックを流用しつつ、__bodyに大見出し
-         （.p-work-detail__heading）を追加した構成（work-app.htmlのPurpose節と同型）。
-         ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
-          <div class="c-section-title">
-            <p class="c-section-title__title">Concept</p>
-          </div>
-
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__heading">
-              ２種類のふりかけを瓶に自分で入れる。
-            </p>
-            <p class="p-work-detail__text">
-              パッケージに同梱された「二色のふりかけ」を混ぜ合わせるというユニークな体験を通じて、「HBA×他業種」、そして「IT×ヒューマニティ（人間らしさ・食）」の融合というHBAの理念を強く印象づけます。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /p-work-detail (Concept) -->
-
-    <!-- =========================================
-         p-work-detail (Design)
-         Figma: node-id=4235-2223 "p-work-detail"
-         他ページのDesignセクションと同じ構成（.p-work-detail__imgあり）。
-         ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
+    <section class="p-work-novelty">
+      <div class="p-work-novelty__panel">
+        <div class="p-work-novelty__inner p-work-novelty__inner--gap-36">
           <div class="c-section-title">
             <p class="c-section-title__title">Design</p>
           </div>
 
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__text">
-              ワークショップで感じた社員の温かさやHBAの理念である「地域に深く根付いた企業」であることをデザインに落とし込むことを意識しました。企業認知向上がの目的だったので、HBAのロゴ周りの余白をとり、ふりかけを一目見ただけでロゴが目に入ってくるようなレイアウトにしました。メインカラーには、HBAの企業カラーであるハッピーレッド、ベースカラーは、ベージュ色を使い、親しみやすさを感じられるようになりました。
-            </p>
-          </div>
+          <div class="p-work-novelty__body p-work-novelty__body--gap-72">
+            <div class="p-work-novelty__body">
+              <p class="p-work-novelty__text">
+                ワークショップで感じた社員の温かさやHBAの理念である「地域に深く根付いた企業」であることをデザインに落とし込むことを意識しました。企業認知向上がの目的だったので、HBAのロゴ周りの余白をとり、ふりかけを一目見ただけでロゴが目に入ってくるようなレイアウトにしました。メインカラーには、HBAの企業カラーであるハッピーレッド、ベースカラーは、ベージュ色を使い、親しみやすさを感じられるようになりました。
+              </p>
+            </div>
 
-          <div class="p-work-detail__img">
-            <img src="assets/img/p-work-detail__img-novelty.webp" alt="ノベルティ制作 デザイン" width="1324" height="1060" />
+            <div class="p-work-novelty__body p-work-novelty__body--gap-36">
+              <p class="p-work-novelty__heading-24">初期案</p>
+              <p class="p-work-novelty__text">
+                初期の案では、瓶のふりかけを台所に開いた時に、ノベルティを通して一番伝えたい、企業ロゴやキャッチコピーが遠目から見たときに見えづらいことや、茶碗を持っているイラストが下着に見える改善点がありました。
+              </p>
+              <!-- 2026-09-26追記7: ユーザー指示により、直前に「完成案」へ挿入した
+                   デザイン画像（正方形1269×1269）を初期案にも使用。__img--sketchは
+                   元々max-width:423px・aspect-ratio:1/1を持ち、この画像の実比率と
+                   一致するためモディファイア追加は不要だった。 -->
+              <div class="p-work-novelty__img p-work-novelty__img--sketch">
+                <img src="assets/img/p-work-detail__img-novelty-sketch.webp" alt="ノベルティ制作 初期案" width="1269" height="1269" />
+              </div>
+            </div>
+
+            <div class="p-work-novelty__body p-work-novelty__body--gap-36">
+              <p class="p-work-novelty__heading-32">完成案</p>
+              <!-- 2026-09-26追記6: ユーザーから完成デザインの画像（正方形1269×1269、
+                   フチなしフルブリード仕上げ、手＋茶碗のイラスト無し版）を受領し
+                   一旦差し替えたが、追記8でユーザーから「その画像は初期案の方に
+                   入れて、完成品には元の画像を」と指示があり、初期案側（308〜310行目）
+                   に移動。完成案は元のアセット（ベージュ余白付き・横長4375×2917、
+                   手で茶碗を持つイラスト）に復元した。デフォルト__img（aspect-ratio:
+                   1324/1060）でobject-fit:coverすると左右のベージュ余白が少し
+                   トリミングされるのみでデザイン本体（ロゴ・見出し・イラスト・
+                   バッジ）は欠けないことをPlaywrightで確認済み。 -->
+              <div class="p-work-novelty__img">
+                <img src="assets/img/p-work-detail__img-novelty.webp" alt="ノベルティ制作 完成案" width="1324" height="1060" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /p-work-detail (Design) -->
+    <!-- /p-work-novelty (Design) -->
 
     <!-- =========================================
-         p-work-detail (Result)
-         Figma: node-id=4236-2301 "p-work-detail"
-         Designと同じ構成（.p-work-detail__imgあり）。
+         p-work-novelty (Result)
+         Figma: node-id=4570-1704「p-work-novelty--03」内Resultブロック
+         （2026-09-26再取得）。本文は変更なし。画像は2026-09-25時点では
+         2枚横並び（1枚目=既存の表彰写真、2枚目=Figma上のみの未取得画像）
+         だったが、今回の再取得でFigma側が単一のフル幅画像（aspect-[1324/1060]）
+         に戻っていたため、2枚目のプレースホルダーを削除し1枚構成に戻した。
+         ユーザーから表彰式の実写真（5人がHBA/FIGHTERSジャージで賞状を持ち
+         ピースサインをしている写真）が提供されたため、従来参照していたが
+         実際にはファイルが存在しなかった
+         assets/img/p-work-detail__img-novelty-result.webpをこの写真から
+         新規作成し、既存の参照パスをそのまま活かした。単一のフル幅画像と
+         なったため__row/__img--result-photo/__img--wideは不要になり、
+         「完成案」（306〜311行目）と同じ書式（__img無モディファイア）に
+         揃えた。
          ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
+    <section class="p-work-novelty">
+      <div class="p-work-novelty__panel">
+        <div class="p-work-novelty__inner">
           <div class="c-section-title">
             <p class="c-section-title__title">Result</p>
           </div>
 
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__text">
-              １４チーム中１位となり最優秀賞を獲得。HBAのノベルティとして配布されることが決定されました。
-            </p>
-          </div>
+          <div class="p-work-novelty__body p-work-novelty__body--gap-24">
+            <div class="p-work-novelty__body">
+              <p class="p-work-novelty__text">
+                １４チーム中１位となり最優秀賞を獲得。HBAのノベルティとして配布されることが決定されました。
+              </p>
+            </div>
 
-          <div class="p-work-detail__img">
-            <img src="assets/img/p-work-detail__img-novelty-result.webp" alt="ノベルティ制作 表彰の様子" width="1324" height="1060" />
+            <div class="p-work-novelty__img">
+              <img src="assets/img/p-work-detail__img-novelty-result.webp" alt="ノベルティ制作 表彰の様子" width="1324" height="1060" />
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /p-work-detail (Result) -->
+    <!-- /p-work-novelty (Result) -->
+
     <!-- =========================================
          p-others
          Figma: node-id=4424-1662「p-others」（PC実測）/
                 node-id=4424-1721「p-others」（SP実測）
-         ユーザー指示により、各Work詳細ページの一番下（p-work-detailセクション群の
+         ユーザー指示により、各Work詳細ページの一番下（p-work-noveltyセクション群の
          直後）に配置。その他の制作物のサムネイルのみを並べる簡易ギャラリー。
          1枚目はFigma上も画像未設定（グレーのプレースホルダー）。2026-09-06:
          node-id=4481-1356で新規クライアント案件（work-izakaya.html。制作途中の
@@ -321,6 +458,21 @@
               <a href="work-detail.html" class="p-others__link">
                 <div class="p-others__img">
                   <img src="assets/img/p-outline__img.webp" alt="バナー制作" width="523" height="359" />
+                </div>
+              </a>
+            </div>
+            <!-- 2026-09-26追加: work-higuma.html（「課題解決サイト」）実装に伴い、
+                 7枚目のカードとして追加。メインビジュアルはユーザー提供の完成サイト
+                 ヒーロー画像（p-outline__img-higuma.webp）を使用。 -->
+            <div class="p-others__wrapper-img">
+              <a href="work-higuma.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-higuma.webp"
+                    alt="課題解決サイト"
+                    width="523"
+                    height="359"
+                  />
                 </div>
               </a>
             </div>

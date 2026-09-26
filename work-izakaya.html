@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>クライアント様　サイトリニューアル（制作途中） | Ryusei Kimura Portfolio</title>
+  <title>居酒屋瑠玖リニューアルサイト | Ryusei Kimura Portfolio</title>
   <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
        読み込む。work-detail.html等、他のWork詳細ページと同じ構成。 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -64,12 +64,15 @@
   <main class="l-main">
     <!-- =========================================
          p-outline
-         Figma: node-id=4481-1347 "p-outline"
+         Figma: node-id=4669-2226「p-outline」（2026-09-25再取得。node-id=4669-2225
+         「p-work-izakaya--04」内）
          クライアント様（アルバイト先の海鮮居酒屋）のサイトリニューアル案件。
-         現在も制作途中のため、&__imgはFigma上も実画像が未設定（グレーの
-         プレースホルダー）のまま。.p-outline__imgに背景色
-         （bg-placeholder）を追加して対応した（.p-others__img等、他の
-         「画像未設定」箇所と同じ考え方）。
+         タイトルがFigma更新で「クライアント様　サイトリニューアル(制作途中）」
+         →「居酒屋瑠玖リニューアルサイト」に変更されたため修正。リード文・
+         タグ・specはFigmaと完全一致のため変更なし。現在も制作途中のため、
+         &__imgはFigma上も実画像が未設定（グレーのプレースホルダー）のまま。
+         .p-outline__imgに背景色（bg-placeholder）を追加して対応した
+         （.p-others__img等、他の「画像未設定」箇所と同じ考え方）。
          ========================================= -->
     <section class="p-outline" id="outline">
       <div class="p-outline__panel">
@@ -88,7 +91,7 @@
 
         <div class="p-outline__inner">
           <div class="p-outline__heading">
-            <p class="p-outline__title">クライアント様　サイトリニューアル(制作途中）</p>
+            <p class="p-outline__title">居酒屋瑠玖リニューアルサイト</p>
             <ul class="p-outline__category-list">
               <li class="c-category">#クライアントワーク</li>
               <li class="c-category c-category--outline">#Webデザイン</li>
@@ -135,113 +138,494 @@
     <!-- /p-outline -->
 
     <!-- =========================================
-         p-work-detail (Target)
-         Figma: node-id=4481-1348 "p-work-detail"
-         __bodyは大見出し（40px）＋説明文2段落（各margin-bottom:0）の構成。
-         node-id=4229-5570等と同じ__heading、node-id=4229-5664と同じ
-         __text-group（余白なしラッパー）を組み合わせている。
-         Figma上は__body直下に参考画像（ポジショニングマップのスクリーンショット、
-         1050×840実測）も付随。サンドボックス環境からFigmaの画像CDNに直接
-         アクセスできず自動ダウンロードができなかったため一旦プレースホルダーに
-         していたが、2026-09-06にユーザーから実画像（ポジショニングマップの
-         スクリーンショット）を受け取り、p-work-detail__img-izakaya-target.webp
-         として追加した。
+         p-work-izakaya (Background)
+         Figma: node-id=4669-2225「p-work-izakaya--04」（2026-09-25再取得）
+         旧: Target/Issue/Conceptの3セクションに分かれていたが、Figma刷新に
+         伴い「Background」1セクション内に「Ep.1〜4」のエピソード形式＋
+         「課題」「効果」「具体的な方法」の3節にまとめる構成に全面変更された。
+         旧セクションの実画像（p-work-izakaya__img-izakaya-target.webp／
+         -issue.webp）のうち、旧issue.webpに対応する画像はFigma新デザインに
+         存在しないため使用箇所なし（削除はせず保持）。
+         2026-09-25、ユーザーよりスマホ非対応の実例スクリーンショット・
+         暖簾／カウンターの実写＆イラスト・配色見本・ポジショニングマップの
+         リサーチボード（競合データ表つき）が提供されたため、以下を実画像に
+         差し替えた：
+         ・課題①「スマホに対応していない」→ img-izakaya-issue-sp.webp
+         ・ポジショニングマップ → img-izakaya-target.webp（新リサーチボード
+           画像に差し替え。旧ポジショニングマップ画像を上書き）
+         ・「根拠となる強み」／デザイン節「カウンター実際の写真」→
+           img-izakaya-counter-photo.webp（同一画像を2箇所で再利用）
+         ・デザイン節「暖簾 実際の写真」→ img-izakaya-noren-photo.webp
+         ・デザイン節「暖簾 イラスト」→ img-izakaya-noren-illust.webp
+         ・デザイン節「カウンター イラスト」→ img-izakaya-counter-illust.webp
+         ・「澄んだカラー設計」配色見本 → img-izakaya-colors.webp
+         ・「サイトで打ち出すこと」→ img-izakaya-message.webp（「『一人でも
+           入れる』ことを明示。カウンターの写真」という設計意図スライドを
+           そのまま使用。ユーザー指示によりこの箇所に配置）
+         課題③「らしさが伝わっていない」の2枚、「実際のデザイン（現在制作
+         途中）」は対応する画像が未確定のため、引き続き「画像未設定」慣例
+         （bg-placeholder）のままとした。比率が一回限りのものは
+         .p-work-izakaya__img--customモディファイア（--arカスタム
+         プロパティ）で指定している。
+         2026-09-26追記: node-id=4669-2227を再取得し全文を検証。構造は
+         Figmaと一致していたため、変更のあった本文3箇所のみ更新した:
+           ・課題①「スマホに対応していない」: Google検索順位への言及
+             （「また、Googleはスマホでの見やすさを...」）がFigmaから
+             削除されていたため、対応する3文目を削除。
+           ・課題②「予約までの導線が悪い」: 末尾「...運ぶことができて
+             いません。」→「...運ぶことができていないと感じました。」。
+           ・課題④「実際のメニューと違う写真が載っている」: 末尾
+             「...原因になります。」→「...原因になると思いました。」。
          ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
+    <section class="p-work-izakaya">
+      <div class="p-work-izakaya__panel">
+        <div class="p-work-izakaya__inner p-work-izakaya__inner--gap-0">
           <div class="c-section-title">
-            <p class="c-section-title__title">Target</p>
+            <p class="c-section-title__title">Background</p>
           </div>
 
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__heading">
-              一人で出張に来た40~50代のサラリーマンと旅行に来た外国人観光客。
-            </p>
-            <div class="p-work-detail__text-group">
-              <p class="p-work-detail__text">
-                私の働いている知見として、出張客としてくるお客様の割合が高く、他店との差別化ポイントであるカウンターのある海鮮居酒屋を打ち出し、ターゲットを40~50代のサラリーマンとすることで、新規顧客獲得見込めるのではないかと推測しました。
+          <!-- Figma実測: c-section-titleからgap:36px、内部の各エピソード間はgap:48px -->
+          <div class="p-work-izakaya__episode-list">
+            <div class="p-work-izakaya__body">
+              <div class="p-work-izakaya__heading-group">
+                <p class="p-work-izakaya__heading-32">Ep. 1</p>
+                <p class="p-work-izakaya__heading-32">アルバイトとして働き、リニューアル前のWebサイトでは、店の良さが伝わらないと考えました。</p>
+              </div>
+              <p class="p-work-izakaya__text">
+                アルバイトとして半年働いて、お店の昔ながらの雰囲気の良さや店員とお客さんの距離の近さ、ボリュームたっぷりの料理を見て、お客様に愛されたとても良い居酒屋だと思いました。しかし、Webサイトを見て見ると、数年前から更新していない良さが伝わっていない物でした。だから、お店の雰囲気や良さを伝えられるサイトを作りたい考えました。
               </p>
-              <p class="p-work-detail__text">
-                また、価格帯 × ターゲット層のポジショニングマップを使用した結果、低価格 × 観光客向けのスペースが空いており、多言語対応のしたリニューアルをすることにより、外国人観光客がくると考えました。
+            </div>
+
+            <div class="p-work-izakaya__body">
+              <div class="p-work-izakaya__heading-group">
+                <p class="p-work-izakaya__heading-32">Ep. 2</p>
+                <p class="p-work-izakaya__heading-32">店長に相談してダメだったので、社長に直談判しに行きました。</p>
+              </div>
+              <p class="p-work-izakaya__text">
+                リニューアルをしたいと思った次の日に店長に相談したところ、「学生には任せられない」と言われて断られました。現状のサイトのままリニューアルができないことを考えるととても悔しく思い、事務所にいる社長にアポイントを取り、直談判をしに行きました。
               </p>
+            </div>
+
+            <div class="p-work-izakaya__body">
+              <div class="p-work-izakaya__heading-group">
+                <p class="p-work-izakaya__heading-32">Ep. 3</p>
+                <p class="p-work-izakaya__heading-32">単にデザインを変える以外に、リニューアルするメリットを求められました。</p>
+              </div>
+              <p class="p-work-izakaya__text">
+                社長に自分の熱量を話した時に、現状のサイトでは困っていなく、リニューアルするメリットを教えて欲しいと言われたので、後日メンバーと共にサイトをリニューアルするメリットを考えました。
+              </p>
+            </div>
+
+            <div class="p-work-izakaya__body">
+              <div class="p-work-izakaya__heading-group">
+                <p class="p-work-izakaya__heading-32">Ep. 4</p>
+                <p class="p-work-izakaya__heading-32">リニューアル提案の際に、「課題」「効果」「具体的な方法」の３つに分けて説明しました。</p>
+              </div>
             </div>
           </div>
 
-          <div class="p-work-detail__img">
-            <img
-              src="assets/img/p-work-detail__img-izakaya-target.webp"
-              alt="価格帯×ターゲット層のポジショニングマップ"
-              width="1050"
-              height="840"
-            />
+          <!-- Figma実測: Ep.4からgap:96px、「課題」「効果」「具体的な方法」の3ブロック間は内部gap:120pxで統一 -->
+          <div class="p-work-izakaya__issues-group">
+            <!-- 課題 -->
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-60">
+              <p class="p-work-izakaya__heading-28">課題</p>
+
+              <!-- Figma実測: 項目間はgap:72px -->
+              <div class="p-work-izakaya__item-list">
+                <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+                  <p class="p-work-izakaya__heading-24">1. スマホに対応していない</p>
+                  <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 3153 / 1239;"><img src="assets/img/p-work-detail__img-izakaya-issue-sp.webp" alt="スマホでの表示が崩れている既存サイトの画面" width="3153" height="1239" /></div>
+                  <p class="p-work-izakaya__text">
+                    現在のサイトパソコン向けに作られており、スマホで見ると文字が小さく読みづらい状態でした。<br />
+                    飲食店を探す際に、多くの人はスマホを使用しているので、文字が小さく読みにくいサイトだと、閲覧者が心理的負担を感じた瞬間に離脱してしまう可能性があると考えました。
+                  </p>
+                </div>
+
+                <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+                  <p class="p-work-izakaya__heading-24">2. 予約までの導線が悪い</p>
+                  <div class="p-work-izakaya__text-group">
+                    <p class="p-work-izakaya__text">お客様がサイトに来てから予約するまでに、どこを押せばいいのか分かりにくい状態です。</p>
+                    <p class="p-work-izakaya__text">「行きたい」と思ってくれたお客様を、迷わせずに予約まで運ぶことができていないと感じました。</p>
+                  </div>
+                </div>
+
+                <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+                  <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--tight">3. 「瑠玖＆魚平らしさ」が伝わっていない</p>
+                  <div class="p-work-izakaya__row">
+                    <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 513 / 307; flex: 1 1 240px;"><!-- 画像未設定（Figma上のみのアセットのため） --></div>
+                    <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 513 / 307; flex: 1 1 240px;"><!-- 画像未設定（Figma上のみのアセットのため） --></div>
+                  </div>
+                  <div class="p-work-izakaya__text-group">
+                    <p class="p-work-izakaya__text">カウンター中心で一人でも入りやすいこと、ホッケフライやニシンの姿盛りといった名物、あら汁飲み放題、店員さんとの距離の近さ。</p>
+                    <p class="p-work-izakaya__text">こうした実際に足を運んだ人だけが知っている魅力が、サイトからはほとんど伝わっていないと考えました。現状、お店の評判は口コミに頼っている状態で、公式サイトからのブランド発信ができていません。</p>
+                  </div>
+                </div>
+
+                <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+                  <p class="p-work-izakaya__heading-24">4. 実際のメニューと違う写真が載っている</p>
+                  <div class="p-work-izakaya__text-group">
+                    <p class="p-work-izakaya__text">現在提供していない料理の写真が掲載されています。</p>
+                    <p class="p-work-izakaya__text">これは来店後の「思っていたのと違う」というミスマッチにつながり、お客様の満足度を下げる原因になると思いました。</p>
+                  </div>
+                </div>
+
+                <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+                  <p class="p-work-izakaya__heading-24">5. 外国人向けの多言語対応していない</p>
+                  <p class="p-work-izakaya__text">
+                    海鮮居酒屋 瑠玖＆魚平 様には多くの外国人観光客がいらっしゃいますが、現状のサイトは日本語以外に対応していません。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 効果 -->
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-60">
+              <p class="p-work-izakaya__heading-28">効果</p>
+
+              <!-- Figma実測: 項目間はgap:72px -->
+              <div class="p-work-izakaya__item-list">
+                <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+                  <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--loose">1. お客様目線での効果</p>
+                  <div class="p-work-izakaya__row p-work-izakaya__row--booking-flow">
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20">予約・来店の動線を整備</p>
+                  <p class="p-work-izakaya__text-sm">予約ボタンを目立たせる、店舗の場所を分かりやすくすることで、途中で離脱するお客様を減らす。</p>
+                </div>
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20">スマホ対応</p>
+                  <p class="p-work-izakaya__text-sm">見やすさが向上し、あわせてSEOの評価も上がる。</p>
+                </div>
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20">ブランドを明確に伝える</p>
+                  <p class="p-work-izakaya__text-sm">来店前から魅力が伝わり、来店後のミスマッチが減る。</p>
+                </div>
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20">公式からの情報発信</p>
+                  <p class="p-work-izakaya__text-sm">口コミに頼らないブランド発信ができる。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+              <p class="p-work-izakaya__heading-24">2. 運営目線での効果</p>
+              <div class="p-work-izakaya__row p-work-izakaya__row--operations">
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20">管理ツール・サーバーの見直し</p>
+                  <p class="p-work-izakaya__text-sm">セキュリティが向上し、更新作業も簡単になる。</p>
+                </div>
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20">ネット集客を見直す機会</p>
+                  <p class="p-work-izakaya__text-sm">サイト運営の目的と方法が明確になる。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+              <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--tight">3. 実際にサイトリニューアルをしたサイトの効果を3つ紹介</p>
+              <div class="p-work-izakaya__row p-work-izakaya__row--case-studies">
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20 p-work-izakaya__heading-20--tight">事例1：老舗蕎麦「久良三」（名古屋市中区錦）</p>
+                  <a href="https://www.heiketyaya.com/" class="p-work-izakaya__text-sm" target="_blank" rel="noopener noreferrer">https://www.heiketyaya.com/</a>
+                  <div class="p-work-izakaya__group">
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">課題</p>
+                      <p class="p-work-izakaya__text-sm">改装で2階席を増やしたのに予約が入らない。「老舗蕎麦屋」のイメージが強すぎて、お酒・接待・宴会で使える店だと認識されていなかった</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">施策</p>
+                      <p class="p-work-izakaya__text-sm">外から見えない2階席や店内の雰囲気を高品質な写真で可視化。「蕎麦前（そばまえ）」を楽しむ店へイメージをシフトし、一品料理・日本酒・コースを前面に出して宴会・接待の予約導線を整備</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">成果</p>
+                      <p class="p-work-izakaya__text-sm">公開から約3ヶ月で売上が昨対比1.5倍。接待・宴会予約が増え、酒の注文数も増えて客単価が上昇</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">学び</p>
+                      <p class="p-work-izakaya__text-sm">新しい設備を作っても「伝わらなければ」売上にならない</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20 p-work-izakaya__heading-20--tight">事例2：ふぐ料理・日本料理「平家茶屋」（山口県下関市）</p>
+                  <a href="https://www.heiketyaya.com/" class="p-work-izakaya__text-sm" target="_blank" rel="noopener noreferrer">https://www.heiketyaya.com/</a>
+                  <div class="p-work-izakaya__group">
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">課題</p>
+                      <p class="p-work-izakaya__text-sm">以前のHPは名刺代わり程度のクオリティで、店の質に見合う情報を伝えきれていなかった</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">施策</p>
+                      <p class="p-work-izakaya__text-sm">高品質なデザインと写真、練られたページ構成で魅力を最大限発信。特に海沿いのロケーションを活かしたトップページ写真を強化</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">成果</p>
+                      <p class="p-work-izakaya__text-sm">売上が月により前年対比120%以上。問い合わせ数・ネット予約数も増加し、オーナーが高い費用対効果を実感</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">学び</p>
+                      <p class="p-work-izakaya__text-sm">強みを写真で正しく見せると、そのまま予約と売上に直結する</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-work-izakaya__col">
+                  <p class="p-work-izakaya__heading-20 p-work-izakaya__heading-20--tight">事例3：居酒屋「炭火とレモン あがりこぐち。」＋立ち飲み「ヨカル」（広島県福山市）</p>
+                  <a href="https://www.agarikoguchi.com/" class="p-work-izakaya__text-sm" target="_blank" rel="noopener noreferrer">https://www.agarikoguchi.com/</a>
+                  <div class="p-work-izakaya__group">
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">課題</p>
+                      <p class="p-work-izakaya__text-sm">新店「ヨカル」が1年以上経っても集客に苦戦。レジ・予約台帳を含めて大手グルメサイトにシステム全体を依存し、広告費をかけ続けないと集客が安定しないジレンマ</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">施策</p>
+                      <p class="p-work-izakaya__text-sm">2店の利用シーンをWeb上で明確に分離。エリアドミナント戦略で駅前の検索を面で制圧。満席時にもう一方の店へ誘導する導線もWeb上で強化</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">成果</p>
+                      <p class="p-work-izakaya__text-sm">SEO・MEOの相乗効果でWeb経由予約が急増、売上昨対比最大200%。グルメサイト広告費を削減する経営判断が可能</p>
+                    </div>
+                    <div class="p-work-izakaya__group p-work-izakaya__group--gap-4">
+                      <p class="p-work-izakaya__heading-16">学び</p>
+                      <p class="p-work-izakaya__text-sm">媒体依存から、自社サイトという「資産」への移行例</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 具体的な方法 -->
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-60">
+              <p class="p-work-izakaya__heading-28">具体的な方法</p>
+
+              <!-- Figma実測: 項目間はgap:72px -->
+              <div class="p-work-izakaya__item-list">
+
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+              <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--loose">1. ターゲットについて</p>
+
+              <!-- Figma実測: ポジショニングマップ／メインターゲット／サブターゲットの3ブロック間はgap:48px -->
+              <div class="p-work-izakaya__positioning-list">
+
+              <div class="p-work-izakaya__body">
+                <p class="p-work-izakaya__heading-20">ポジショニングマップ</p>
+                <p class="p-work-izakaya__text">
+                  事前のリングで競合を意識している飲食店はないということだったので、ポジショニイングマップを使用し、現在の居酒屋ルック様の立ち位置を確認しました。
+                </p>
+                <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 1806 / 918;">
+                  <img src="assets/img/p-work-detail__img-izakaya-target.webp" alt="ポジショニングマップのリサーチボード（競合データ表つき）" width="1806" height="918" />
+                </div>
+              </div>
+
+              <div class="p-work-izakaya__body">
+                <p class="p-work-izakaya__heading-20">メインターゲット</p>
+                <!-- Figma実測: 「一人客・出張客」見出し＋本文セットと、strengths行の間はgap:32px -->
+                <div class="p-work-izakaya__persona-block">
+                  <div class="p-work-izakaya__group">
+                    <p class="p-work-izakaya__heading-16">一人客・出張客</p>
+                    <p class="p-work-izakaya__text-sm">
+                      私のアルバイト経験での知見、お客様からの声、そして事務所の方からの客観的なお話から、一人でも入店できる点に非常に満足されているお客様が多いことが分かり、一人客をターゲットとしました。またお客様の声から、道外からの出張で来店されたお客様が同僚や友人に紹介し、数珠繋ぎでお店を紹介してくれている状況を知り、「言葉だけではなく、サイトを通じて自分で良さを感じてほしい」と考え、出張客もターゲットとしました。
+                    </p>
+                  </div>
+                  <div class="p-work-izakaya__row p-work-izakaya__row--strengths">
+                    <div class="p-work-izakaya__col">
+                      <p class="p-work-izakaya__heading-16">根拠となる強み</p>
+                      <div class="p-work-izakaya__group p-work-izakaya__group--gap-8">
+                        <p class="p-work-izakaya__text">カウンター席が多い／一人でも来やすい／リーズナブル</p>
+                        <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 615 / 296;"><img src="assets/img/p-work-detail__img-izakaya-counter-photo.webp" alt="カウンター席の実際の様子" width="1845" height="888" /></div>
+                      </div>
+                    </div>
+                    <div class="p-work-izakaya__col">
+                      <p class="p-work-izakaya__heading-16">サイトで打ち出すこと</p>
+                      <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 411 / 328;"><img src="assets/img/p-work-detail__img-izakaya-message.webp" alt="「一人でも入れる」ことを明示。カウンターの写真" width="1233" height="984" /></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-work-izakaya__body">
+                <p class="p-work-izakaya__heading-20">サブターゲット</p>
+                <div class="p-work-izakaya__row p-work-izakaya__row--groups">
+                  <div class="p-work-izakaya__col">
+                    <p class="p-work-izakaya__heading-16">宴会・団体</p>
+                    <p class="p-work-izakaya__text-sm">フロアが４階まであり、宴会最大100名以上の貸切で行うことができ、他の居酒屋にはない特徴であると考えました。</p>
+                  </div>
+                  <div class="p-work-izakaya__col">
+                    <p class="p-work-izakaya__heading-16">外国人観光客</p>
+                    <p class="p-work-izakaya__text-sm">狸小路はインバウンドの影響によりたくさんの外国人観光客が来る状況です。この好機を活かしてインバウンド顧客による高い客単価を確保しながらも、事業の土台である既存の常連客離れを防ぐ施策を並行して行いたいと考えています。</p>
+                  </div>
+                  <div class="p-work-izakaya__col">
+                    <p class="p-work-izakaya__heading-16">地元のリピーター</p>
+                    <p class="p-work-izakaya__text-sm">常連客により店舗のブランド価値が安定しているからこそ、今来ている常連客にさらに満足してもらいと考えました。</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+              <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--tight">2. 大事な考え方の提示</p>
+              <div class="p-work-izakaya__body">
+                <p class="p-work-izakaya__heading-20">「安い・早い」で勝負しない</p>
+                <div class="p-work-izakaya__text-group">
+                  <p class="p-work-izakaya__text">予約時は、価格やクーポンで比較されるため、グルメサイト上で戦うと価格競争になり、利益が削られると考えました。</p>
+                  <p class="p-work-izakaya__text">自社サイトでは、お店の世界観・店主のストーリー・こだわりを伝え、「安いから行く」ではなく「瑠玖＆魚平だから行く」というお客様が増やし、広告費に頼らない集客を考えています。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+              <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--tight">3. 3つの予約サイト窓口を1つに統合するご提案</p>
+              <p class="p-work-izakaya__text">
+                旧サイトでは、「昔作られた自社サイト」、「ぐるなびのホームページ」、「ホットペッパーのホームページ」の３つのホームページがありました。店舗を知ることができる窓口が複数あることにより、「SEOの分散」や「情報の食い違い」、「データが取れない」の３つが起こってしまうと考えました。そこで、これらの課題を解消し、Webサイトを一つに集約して一元管理することを考えました。窓口を一本化することでSEO効果を高めて検索で見つけてもらいやすくし、常に最新で正確な情報を発信できる状態を作ります。また、サイト閲覧者のデータを正確に取得・分析できる環境を整えることで、お客様がどのような情報に魅力を感じているかを把握し、より伝わるサイトへと改善していくことを提案しました。
+              </p>
+            </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /p-work-detail (Target) -->
+    <!-- /p-work-izakaya (Background) -->
 
     <!-- =========================================
-         p-work-detail (Issue)
-         Figma: node-id=4481-1349 "p-work-detail"
-         このプロジェクトで新規に登場したセクション見出し。既存の
-         Target/Purpose等と同じ__body（説明文1段落のみ）の構成のため、
-         新規CSSは追加せず既存の.p-work-detailブロックをそのまま流用した。
-         Target同様、__body直下に参考画像（サイト課題をまとめた資料の
-         スクリーンショット、1050×840実測）が付随。同じ理由で一旦
-         プレースホルダーにしていたが、2026-09-06にユーザーから実画像を
-         受け取り、p-work-detail__img-izakaya-issue.webpとして追加した。
+         p-work-izakaya (Design)
+         Figma: node-id=4669-2395「p-design」（2026-09-25再取得）。
+         「画像の角をなくす」「デザインの方のファイル構造が違う」との
+         フィードバックを受け、get_design_contextで実測した実際の階層に
+         組み直した：
+           p-design__content（gap:72px） … タイトル／コンセプト群／最終
+             デザイン群の3ブロック
+             └ コンセプト群（gap:72px） … コンセプト要約(gap:36px)／
+                 ターゲット説明(gap:36px)
+                 └ ターゲット説明内 visual-expression（gap:48px） …
+                     1.ルックの世界観／2.澄んだカラー設計／
+                     3.太すぎず細すぎないフォントの3項目
+                     └ 1.内 暖簾・カウンターブロック（gap:16px、各ブロック
+                         内も見出し→写真行がgap:16px）
+         見出し・画像もあわせて実測：
+           ・heading-28（デザインコンセプト／昔ながらの温もりがある居酒屋
+             瑠玖／ターゲットやコンセプトに合わせた.../実際のデザイン...）
+             は全てline-height 48pxのため--looseを付与
+             （Backgroundの24pxとは別クラスタ）。
+           ・1./2./3.見出しはline-height 32pxのため--loose（heading-24）を
+             付与。
+           ・暖簾/カウンターの写真行はrow--noren-photo/--counter-photo
+             （列内gap 36px/38px、列max-width 323px×690px/689px）。
+           ・澄んだカラー設計の配色見本、実際のデザインのプレビュー画像は
+             横中央寄せ（--center）。
+           ・全画像インスタンスにrounded-*指定が無いことを確認し、
+             .p-work-izakaya__imgの角丸を撤廃（Backgroundの画像も含め
+             サイト全体で角丸なしが正）。
+         コンテンツ自体は前回取得時から変更なし（新規セクション、Figma CDN
+         到達不可のためプレースホルダーだった6画像は2026-09-25にユーザー
+         提供の実画像へ差し替え済み。「実際のデザイン」のみ確定画像が
+         無いため引き続きプレースホルダー）。
+         2026-09-26追記: ユーザーから「実際のデザイン（現在制作途中）」用の
+         サイト全体スクリーンショット（居酒屋瑠玖トップページ、フル
+         ページ縦長・1532×8000px）を受領。プレースホルダーの実測比率
+         （--ar: 712/3716 ≒ 0.1916）と画像の実比率（1532/8000 ≒ 0.1915）が
+         一致することを確認の上、
+         assets/img/p-work-detail__img-izakaya-design-actual.webpとして
+         保存し実装。これでDesignセクションの全画像が実装完了。
          ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
+    <section class="p-work-izakaya">
+      <div class="p-work-izakaya__panel">
+        <div class="p-work-izakaya__inner p-work-izakaya__inner--gap-36">
           <div class="c-section-title">
-            <p class="c-section-title__title">Issue</p>
+            <p class="c-section-title__title">Design</p>
           </div>
 
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__text">
-              SEO自体に問題はありませんでしたが、サイト更新日が７年前ということがあり、使われている料理の写真が現在提供している食べ物とは、違うものが使われている現状課題がありました。
-            </p>
-          </div>
+          <!-- p-design__content: gap:72px -->
+          <div class="p-work-izakaya__body p-work-izakaya__body--gap-72">
+            <p class="p-work-izakaya__heading-28 p-work-izakaya__heading-28--loose">デザインコンセプト</p>
 
-          <div class="p-work-detail__img">
-            <img
-              src="assets/img/p-work-detail__img-izakaya-issue.webp"
-              alt="サイト課題をまとめた資料"
-              width="1050"
-              height="840"
-            />
+            <!-- p-design__concept: gap:72px -->
+            <div class="p-work-izakaya__body p-work-izakaya__body--gap-72">
+              <!-- コンセプト要約: gap:36px -->
+              <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+                <p class="p-work-izakaya__heading-28 p-work-izakaya__heading-28--loose">昔ながらの温もりがある居酒屋瑠玖</p>
+                <p class="p-work-izakaya__text">
+                  コンセプトの軸は「あのるっく」を表現すること。狸小路ブランドと結びついた存在であり、「狸小路6丁目のるっく」として、インバウンドをはじめとする時代の変化を乗り越えて歩んできた店という文脈を打ち出す。
+                </p>
+              </div>
+
+              <!-- ターゲット説明: gap:36px -->
+              <div class="p-work-izakaya__body p-work-izakaya__body--gap-36">
+                <p class="p-work-izakaya__heading-28 p-work-izakaya__heading-28--loose">ターゲットやコンセプトに合わせたデザインにするために。</p>
+
+                <!-- visual-expression: gap:48px -->
+                <div class="p-work-izakaya__body p-work-izakaya__body--gap-48">
+                  <div class="p-work-izakaya__body">
+                    <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--loose">1. ルックの世界観を視覚的に表現。</p>
+                    <p class="p-work-izakaya__text">
+                      コンセプトの軸は「あのるっく」を表現すること。狸小路ブランドと結びついた存在であり、「狸小路6丁目のるっく」として、インバウンドをはじめとする時代の変化を乗り越えて歩んできた店という文脈を打ち出す。
+                    </p>
+
+                    <!-- 暖簾・カウンターのブロック間: gap:16px -->
+                    <div class="p-work-izakaya__body p-work-izakaya__body--gap-16">
+                      <div class="p-work-izakaya__body p-work-izakaya__body--gap-16">
+                        <p class="p-work-izakaya__heading-20">暖簾のヘッダー</p>
+                        <div class="p-work-izakaya__row p-work-izakaya__row--noren-photo">
+                          <div class="p-work-izakaya__col">
+                            <p class="p-work-izakaya__heading-16">実際の写真</p>
+                            <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 323 / 176;"><img src="assets/img/p-work-detail__img-izakaya-noren-photo.webp" alt="暖簾の実際の写真" width="969" height="528" /></div>
+                          </div>
+                          <div class="p-work-izakaya__col">
+                            <p class="p-work-izakaya__heading-16">イラスト</p>
+                            <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 690 / 91;"><img src="assets/img/p-work-detail__img-izakaya-noren-illust.webp" alt="暖簾のイラスト" width="2067" height="273" /></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="p-work-izakaya__body p-work-izakaya__body--gap-16">
+                        <p class="p-work-izakaya__heading-20">カウンター</p>
+                        <div class="p-work-izakaya__row p-work-izakaya__row--counter-photo">
+                          <div class="p-work-izakaya__col">
+                            <p class="p-work-izakaya__heading-16">実際の写真</p>
+                            <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 323 / 176;"><img src="assets/img/p-work-detail__img-izakaya-counter-photo.webp" alt="カウンターの実際の写真" width="1845" height="888" /></div>
+                          </div>
+                          <div class="p-work-izakaya__col">
+                            <p class="p-work-izakaya__heading-16">イラスト</p>
+                            <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 689 / 91;"><img src="assets/img/p-work-detail__img-izakaya-counter-illust.webp" alt="カウンターのイラスト" width="2067" height="273" /></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-work-izakaya__body">
+                    <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--loose">2. 澄んだカラー設計</p>
+                    <div class="p-work-izakaya__body p-work-izakaya__body--center">
+                      <ul class="p-work-izakaya__list--disc">
+                        <li>ベースカラー（ベージュ） 店内の賑やかさや人情味あふれる温かみを表現しつつ、老舗店のような趣を演出するために、ベージュを採用しました。</li>
+                        <li>メインカラー（ネイビー）： 新鮮な海鮮料理との親和性を高めるため、深みのあるネイビーをキーカラーに設定しています。</li>
+                        <li>トーン（くすみ色）： 全体的に彩度を抑えた「くすみカラー」に統一することで、レトロで落ち着いた居酒屋ルックの雰囲気を表現しています。</li>
+                      </ul>
+                      <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 424 / 120; max-width: 424px;"><img src="assets/img/p-work-detail__img-izakaya-colors.webp" alt="配色見本" width="1272" height="360" /></div>
+                    </div>
+                  </div>
+
+                  <div class="p-work-izakaya__body">
+                    <p class="p-work-izakaya__heading-24 p-work-izakaya__heading-24--loose">3. 太すぎず細すぎないフォント</p>
+                    <p class="p-work-izakaya__text">
+                      老舗店としての歴史や確かな品質を伝えるため、格調高い「明朝体」をベースとしながら、店の重厚感の印象を与えすぎないために、太すぎないウエイトを採用しました。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 実際のデザイン: gap:24px（デフォルト）、画像は横中央寄せ -->
+            <div class="p-work-izakaya__body p-work-izakaya__body--center">
+              <p class="p-work-izakaya__heading-28 p-work-izakaya__heading-28--loose">実際のデザイン（現在制作途中）</p>
+              <div class="p-work-izakaya__img p-work-izakaya__img--custom" style="--ar: 712 / 3716; max-width: 712px;"><img src="assets/img/p-work-detail__img-izakaya-design-actual.webp" alt="居酒屋瑠玖 実際のデザイン（サイト全体）" width="1532" height="8000" /></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /p-work-detail (Issue) -->
-
-    <!-- =========================================
-         p-work-detail (Concept)
-         Figma: node-id=4481-1350 "p-work-detail"
-         node-id=4229-5663等と同じ__heading（40px）＋__text（20px）の2段構成。
-         ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
-          <div class="c-section-title">
-            <p class="c-section-title__title">Concept</p>
-          </div>
-
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__heading">
-              昔ながらの温もりがある居酒屋〇〇店
-            </p>
-            <p class="p-work-detail__text">
-              昔から地元から愛されている老舗居酒屋という側面をサイト上で伝えるべきだと考えました。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /p-work-detail (Concept) -->
+    <!-- /p-work-izakaya (Design) -->
 
     <!-- =========================================
          p-others
@@ -320,6 +704,21 @@
                   <img
                     src="assets/img/p-outline__img.webp"
                     alt="バナー制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <!-- 2026-09-26追加: work-higuma.html（「課題解決サイト」）実装に伴い、
+                 7枚目のカードとして追加。メインビジュアルはユーザー提供の完成サイト
+                 ヒーロー画像（p-outline__img-higuma.webp）を使用。 -->
+            <div class="p-others__wrapper-img">
+              <a href="work-higuma.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-higuma.webp"
+                    alt="課題解決サイト"
                     width="523"
                     height="359"
                   />
