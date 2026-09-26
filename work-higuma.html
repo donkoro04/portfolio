@@ -237,6 +237,17 @@
          （FSRCNN）で補正した。ローディング／各セクションの2枚はFigma上でも
          単色プレースホルダー（bg-[#c4c4c4]）扱いのため、同様にプレースホルダー
          とした。
+         2026-09-26追記: ユーザーからサイト全体モックアップの高解像度版
+         （1779×8000px）を再提供いただいたため、超解像補正済みの旧画像
+         （924×4096px）から差し替え。内容（レイアウト・セクション構成）は
+         旧画像と同一（拡大率約1.93倍で全体一致を確認）で、より高精細な
+         元データに更新されたのみ。width/height属性も新しい実寸に更新。
+         2026-09-26追記2: ユーザー指摘「上が切れている」により調査。
+         .p-work-higuma__img--mockupのaspect-ratioが旧画像比率
+         （924/4096）のまま固定されており、object-fit: coverで新画像
+         （1779/8000、旧よりわずかに縦長）の上下がトリミングされていた
+         不具合。_p-work-higuma.scss側のaspect-ratioを新画像の実測比率
+         （1779/8000）に更新し解消（dist/style.cssにも反映）。
          ========================================= -->
     <section class="p-work-higuma">
       <div class="p-work-higuma__panel">
@@ -285,7 +296,7 @@
             <div class="p-work-higuma__body p-work-higuma__body--gap-24">
               <p class="p-work-higuma__heading-28 p-work-higuma__heading-28--tight">熊の不器用さを表現するカクカクしたフォント</p>
               <p class="p-work-higuma__text">
-                熊の不器用さをイラスト親文章などの表現に頼らず、タイポグラフィの表現によって視覚的に伝えるアプローチをしました。そこでフォントには、直線的で飾りのない素朴さの持つ「ADS-strong」を採用しました。
+                熊の不器用さをイラスト親文章などの表現に頼らず、タイポグラフィの表現によって視覚的に伝えるアプローチをしました。そこでフォントには、直線的で飾りのない素朴さの持つ「Zen Kaku Gothic New」を採用しました。
               </p>
             </div>
 
@@ -313,8 +324,8 @@
               <img
                 src="assets/img/p-work-higuma__mockup.webp"
                 alt="サイトデザイン全体モックアップ"
-                width="924"
-                height="4096"
+                width="1779"
+                height="8000"
               />
             </div>
           </div>
