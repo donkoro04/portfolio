@@ -95,7 +95,7 @@
           <div class="p-profile-page__body">
             <div class="c-profile-card__img">
               <img
-                src="assets/img/c-profile-card__img.png"
+                src="assets/img/c-profile-card__img.webp"
                 alt="Ryusei Kimura"
                 width="372"
                 height="372"
@@ -118,7 +118,11 @@
 
     <!-- =========================================
          p-skill
-         Figma: node-id=4225-3212 "p-skill"
+         Figma: node-id=4585-1948「p-skill」（2026-09-26取得）
+         2026-09-26追記: 以前のツール名羅列のみのシンプルなテキスト1行
+         （node-id=4225-3212）から、スキル項目ごとに見出し＋説明文＋使用
+         ツールのタグを3カラムで並べる詳細なデザインに刷新。ユーザー確認の上、
+         旧デザインをこちらに置き換えた。
          ========================================= -->
     <section class="p-skill">
       <div class="p-skill__panel">
@@ -128,10 +132,44 @@
             <p class="c-section-title__title">Skill</p>
           </div>
 
-          <p class="p-skill__text">
-            <span class="p-skill__text-main">Figma/Illustrator/Photoshop/visual studio code/After Effects</span>
-            <span class="p-skill__text-etc">etc</span>
-          </p>
+          <div class="p-skill__list">
+            <div class="p-skill__item">
+              <p class="p-skill__heading">意見を的確に汲み取りアウトプットに落とし込むデザイン力</p>
+              <div class="p-skill__description">
+                <p>クライアントワークやチーム作業の際に、意見や言葉のニュアンスを拾い、デザインに落とし込むことを得意としています。</p>
+                <p>会話の中で出てくる抽象的なイメージや微細なこだわりを逃さず汲み取り、ムードボードやプロトタイプを用いて視覚的に言語化することを大切にしています。</p>
+              </div>
+              <div class="p-skill__tags">
+                <span class="c-tag">Illustrator</span>
+                <span class="c-tag">Photoshop</span>
+              </div>
+            </div>
+
+            <div class="p-skill__item">
+              <p class="p-skill__heading">デザインとコードのギャップを埋める、実装フレンドリーなUI設計</p>
+              <p class="p-skill__description">
+                「見た目は美しいけれど、コードが複雑で修正しにくい」「エンジニアへ渡したときに意図と違う組み上がりになってしまう」そうしたデザインと実装のギャップをなくすアプローチを大切にしています。
+              </p>
+              <div class="p-skill__tags">
+                <span class="c-tag">Figma</span>
+                <span class="c-tag">BEM設計</span>
+                <span class="c-tag">Flocss設計</span>
+              </div>
+            </div>
+
+            <div class="p-skill__item">
+              <p class="p-skill__heading">実務の現場を見据えた、保守性と拡張性を担保したSass設計</p>
+              <p class="p-skill__description">
+                「作った本人しか直せないコード」や「CSSを修正したら別の場所が崩れてしまった」という運用の課題を防ぐため、保守性と拡張性にこだわったコーディングを行っています。
+              </p>
+              <div class="p-skill__tags">
+                <span class="c-tag">HTML</span>
+                <span class="c-tag">CSS</span>
+                <span class="c-tag">javascript</span>
+                <span class="c-tag">Sass設計</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -144,6 +182,7 @@
          「集中力」「負けず嫌い」「素直さ」という短い単語に変更されていたため
          修正。1つ目の本文も「ユーザーの見やすく設計し」の「目線に立ち」が
          抜けていたのを補った（他の2項目の本文は変更なし）。
+         2026-09-06再取得: 内容に差分なし（変更不要）。
          ========================================= -->
     <section class="p-strength">
       <div class="p-strength__panel">

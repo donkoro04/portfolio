@@ -142,85 +142,87 @@
     <!-- /p-outline -->
 
     <!-- =========================================
-         p-work-detail
-         Figma: node-id=4229-5456 "p-work-detail"
+         p-work-banner (background)
+         Figma: node-id=4673-2656「p-work-banner--05」（2026-09-25再取得）
+         旧: Target/Purposeの2セクションに分かれていたが、Figma刷新に伴い
+         「background」1セクション内に「ターゲット」「目的」の中見出し
+         （.p-work-banner__heading-32）付きブロックとしてまとめる構成に変更。
+         目的の本文もFigma更新に合わせて修正（旧:「普段は高齢者向けの
+         ウォーキングイベントや...」→新:「バナーを通じて、ウォーキング
+         クラブに入会してもらうことが目的。」）。
+         2026-09-25追記: __inner直下のgap(36px)と、ターゲット/目的の2つの
+         __body間のgap(48px)は別値のため、__group--gap-48ラッパーで束ねる
+         構成に修正（フォント/gap実測に基づく）。
          ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
+    <section class="p-work-banner">
+      <div class="p-work-banner__panel">
+        <div class="p-work-banner__inner">
           <div class="c-section-title">
-            <p class="c-section-title__title">Target</p>
+            <p class="c-section-title__title">background</p>
           </div>
 
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__text">
-              スポーツが好きで平日の仕事前後や週末も活発にトレーニングしている。ランニングのレースにも出場する。自己流トレーニングに限界を感じている。
-            </p>
+          <div class="p-work-banner__group p-work-banner__group--gap-48">
+            <div class="p-work-banner__body">
+              <p class="p-work-banner__heading-32">ターゲット</p>
+              <p class="p-work-banner__text">
+                スポーツが好きで平日の仕事前後や週末も活発にトレーニングしている。ランニングのレースにも出場する。自己流トレーニングに限界を感じている。
+              </p>
+            </div>
+
+            <div class="p-work-banner__body">
+              <p class="p-work-banner__heading-32">目的</p>
+              <p class="p-work-banner__text">
+                バナーを通じて、ウォーキングクラブに入会してもらうことが目的。
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /p-work-detail (Target) -->
+    <!-- /p-work-banner (background) -->
 
     <!-- =========================================
-         p-work-detail (Purpose)
-         Figma: node-id=4229-5457 "p-work-detail"
-         Target（node-id=4229-5456）と全く同じ構造・見た目のため、
-         .p-work-detailブロックをそのまま流用している。
+         p-work-banner (Design)
+         Figma: node-id=4673-2656「p-work-banner--05」（2026-09-25再取得。
+         backgroundと同一ノード配下に統合済み）
+         Target/Purposeと同じ.p-work-bannerブロックに、メインビジュアル
+         （.p-work-banner__img）を追加した構成。
+         2026-09-25追記: __inner直下のgap(36px)と、本文→画像間のgap(24px)は
+         別値のため、__group--gap-24ラッパーで束ねる構成に修正
+         （フォント/gap実測に基づく）。
          ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
-          <div class="c-section-title">
-            <p class="c-section-title__title">Purpose</p>
-          </div>
-
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__text">
-              普段は高齢者向けのウォーキングイベントや子供向けの運動教室をしているが、本格的にスポーツに取り組む大人向けのメニューも充実させること
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /p-work-detail (Purpose) -->
-
-    <!-- =========================================
-         p-work-detail (Design)
-         Figma: node-id=4229-5555 "p-work-detail"
-         Target/Purposeと同じ.p-work-detailブロックに、メインビジュアル
-         （.p-work-detail__img）を追加した構成。
-         ========================================= -->
-    <section class="p-work-detail">
-      <div class="p-work-detail__panel">
-        <div class="p-work-detail__inner">
+    <section class="p-work-banner">
+      <div class="p-work-banner__panel">
+        <div class="p-work-banner__inner">
           <div class="c-section-title">
             <p class="c-section-title__title">Design</p>
           </div>
 
-          <div class="p-work-detail__body">
-            <p class="p-work-detail__text">
-              被写体の目線に合わせて文字を斜めに配置し、躍動感を表現しました。またサブテキストを背景色と補色関係にすることで視認性を高め、バナーを見た時に一番身入るような工夫をしました。
-            </p>
-          </div>
+          <div class="p-work-banner__group p-work-banner__group--gap-24">
+            <div class="p-work-banner__body">
+              <p class="p-work-banner__text">
+                被写体の目線に合わせて文字を斜めに配置し、躍動感を表現しました。またサブテキストを背景色と補色関係にすることで視認性を高め、バナーを見た時に一番身入るような工夫をしました。
+              </p>
+            </div>
 
-          <div class="p-work-detail__img">
-            <img
-              src="assets/img/p-work-detail__img.png"
-              alt="バナー練習 デザイン"
-              width="1324"
-              height="1060"
-            />
+            <div class="p-work-banner__img">
+              <img
+                src="assets/img/p-work-detail__img.png"
+                alt="バナー練習 デザイン"
+                width="1324"
+                height="1060"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /p-work-detail (Design) -->
+    <!-- /p-work-banner (Design) -->
     <!-- =========================================
          p-others
          Figma: node-id=4424-1662「p-others」（PC実測）/
                 node-id=4424-1721「p-others」（SP実測）
-         ユーザー指示により、各Work詳細ページの一番下（p-work-detailセクション群の
+         ユーザー指示により、各Work詳細ページの一番下（p-work-bannerセクション群の
          直後）に配置。その他の制作物のサムネイルのみを並べる簡易ギャラリー。
          1枚目はFigma上も画像未設定（グレーのプレースホルダー）。2026-09-06:
          node-id=4481-1356で新規クライアント案件（work-izakaya.html。制作途中の
@@ -299,6 +301,21 @@
                   <img
                     src="assets/img/p-outline__img.webp"
                     alt="バナー制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <!-- 2026-09-26追加: work-higuma.html（「課題解決サイト」）実装に伴い、
+                 7枚目のカードとして追加。メインビジュアルはユーザー提供の完成サイト
+                 ヒーロー画像（p-outline__img-higuma.webp）を使用。 -->
+            <div class="p-others__wrapper-img">
+              <a href="work-higuma.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-higuma.webp"
+                    alt="課題解決サイト"
                     width="523"
                     height="359"
                   />

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>課題解決サイト | Ryusei Kimura Portfolio</title>
+  <!-- 英数字用フォント（$font-family-en）に指定しているInterを実際にWebフォントとして
+       読み込む。これまで@font-face/リンクが無く、Inter未インストール環境では
+       Helvetica Neue等にフォールバックしており、本文中の英数字部分だけ実機フォントの
+       Mediumが太く見える不具合があったため追加（ユーザー指示「数字や英語のフォントが
+       太くなっているから直して」）。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body>
+  <!-- =========================================
+       ヘッダー（画面固定）
+       他のwork-*.htmlと同じ構造。「Work」を現在地としてactive表示にしている。
+       PC: c-nav（node-id=4229-5406） / SP: c-header（node-id=4244-2772）
+       ========================================= -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      <!-- SP専用: ロゴ + ハンバーガーメニュー -->
+      <div class="c-header">
+        <div class="c-header__bar">
+          <a href="index.html" class="c-header__logo" aria-label="Ryusei Kimura Portfolio">
+            <img
+              src="assets/img/p-hero__title-bg.png"
+              alt="Ryusei Kimura Portfolio"
+              width="172"
+              height="50"
+            />
+          </a>
+          <button type="button" class="c-header__menu-btn" aria-label="メニューを開く" aria-expanded="false" data-c-header-toggle>
+            <span class="c-header__menu-icon"></span>
+            <span class="c-header__close-icon"></span>
+          </button>
+        </div>
+        <nav class="c-header__panel" aria-label="サイト内ナビゲーション（モバイル）">
+          <div class="c-header__panel-inner">
+            <div class="c-header__panel-content">
+              <ul class="c-header__nav-list">
+                <li><a href="index.html#hero" class="c-header__nav-item">Home</a></li>
+                <li><a href="index.html#work" class="c-header__nav-item">Work</a></li>
+                <li><a href="about.html" class="c-header__nav-item">About Me</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- PC専用: ナビゲーションピル -->
+      <nav class="c-nav l-header__nav" aria-label="サイト内ナビゲーション">
+        <a href="index.html#hero" class="c-nav__item">Home</a>
+        <a href="index.html#work" class="c-nav__item c-nav__item--active">Work</a>
+        <a href="about.html" class="c-nav__item">About Me</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /ヘッダー -->
+
+  <main class="l-main">
+    <!-- =========================================
+         p-outline
+         Figma: node-id=4657-1892「p-work-detail--02」（2026-09-26取得）
+         Work詳細ページ本体（index.htmlの.p-work-list「課題解決サイト」
+         カードから遷移する想定）。.p-outlineブロック自体は他ページと共通のため
+         新規CSSは不要（__imgの1050:700.264実測比率も既存の$p-outline-img-*と
+         完全一致）。メインビジュアルはFigma CDN（figma.com）がサンドボックスから
+         到達不可だったため、2026-09-26にユーザーから実際の完成サイトの
+         ヒーロー画像（p-outline__img-higuma.webp）を提供いただき反映した。
+         ========================================= -->
+    <section class="p-outline" id="outline">
+      <div class="p-outline__panel">
+        <div class="p-outline__header">
+          <div class="p-outline__title-wrapper">
+            <div class="p-outline__title-bg">
+              <img
+                src="assets/img/p-hero__title-bg.png"
+                alt="Ryusei Kimura Portfolio"
+                width="500"
+                height="145"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="p-outline__inner">
+          <div class="p-outline__heading">
+            <p class="p-outline__title">課題解決サイト</p>
+            <ul class="p-outline__category-list">
+              <li class="c-category">#自主制作</li>
+              <li class="c-category c-category--outline">#Webデザイン</li>
+            </ul>
+          </div>
+
+          <p class="p-outline__lead">
+            学内コンテストで、最近の環境問題である「ヒグマによる人身事故」に着目し、その課題を解決するサイトを制作しました。
+          </p>
+
+          <div class="p-outline__spec-list">
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">使っているソフト</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">Figma</p>
+                <p class="p-outline__spec-text">Illustrator</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">制作期間</p>
+              <p class="p-outline__spec-text">2ヶ月</p>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">メンバー</p>
+              <div class="p-outline__spec-text-group">
+                <p class="p-outline__spec-text">デザイナー</p>
+                <p class="p-outline__spec-text">プログラマー</p>
+              </div>
+            </div>
+            <div class="p-outline__spec-item">
+              <p class="p-outline__spec-title">担当した役割</p>
+              <p class="p-outline__spec-text">デザイナー</p>
+            </div>
+          </div>
+
+          <div class="p-outline__img-wrapper">
+            <div class="p-outline__img">
+              <img
+                src="assets/img/p-outline__img-higuma.webp"
+                alt="課題解決サイト"
+                width="1050"
+                height="700"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-outline -->
+
+    <!-- =========================================
+         p-work-higuma (Background)
+         Figma: node-id=4657-1892「p-work-detail--02」（2026-09-26取得）
+         「北海道の問題」（番号付き課題2点）→「現状の課題」→「ターゲット」→
+         「コンセプト」の4ブロック構成。
+         ========================================= -->
+    <section class="p-work-higuma">
+      <div class="p-work-higuma__panel">
+        <div class="p-work-higuma__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Background</p>
+          </div>
+
+          <div class="p-work-higuma__body p-work-higuma__body--gap-120">
+            <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+              <p class="p-work-higuma__heading-32">北海道の問題</p>
+              <div class="p-work-higuma__body p-work-higuma__body--gap-72">
+                <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+                  <ol class="p-work-higuma__list" start="1">
+                    <li>北海道のヒグマの個体数の増加</li>
+                  </ol>
+                  <p class="p-work-higuma__text">
+                    北海道のヒグマの個体数は、1990年の約5800等から1万以上に増加しています、主な原因として、春グマ駆除廃止による生存率上昇です。さらに急増したエゾシカの採食やデントコーンなどの農作物の利用によるヒグマの栄養状態の改善が時代とともに改善されてきました。これらにより、ヒグマの生存率や繁殖率が向上し、個体数が年々増加傾向にあります。
+                  </p>
+                </div>
+                <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+                  <ol class="p-work-higuma__list" start="2">
+                    <li>ヒグマによる人身事故の増加</li>
+                  </ol>
+                  <p class="p-work-higuma__text">
+                    ヒグマによる人身事故が、山菜取りやレジャー中の遭遇に加え、生活圏への出没増加によりリスクが高まっています。遭遇経験の乏しさや過度の恐怖心から適切な判断や予防行動が取れないことが原因であり、鈴や熊撃退スプレーの基本的な知識が知ることが必要です。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+              <p class="p-work-higuma__heading-32">現状の課題</p>
+              <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+                <p class="p-work-higuma__heading-24">
+                  熊の断片的な情報（ニュースでの報道）が原因で本来の特性や習性を誤って認知されていること
+                </p>
+                <p class="p-work-higuma__text">
+                  テレビやSNSなどの断片的なニュース報道では、市街地に出没したヒグマが、危険な猛獣としての側面ばかりが強調されがちです。その結果、無差別に人を襲う凶暴な動物という誤った認識が広まり、本来のヒグマの性格や行動特性を知らずに、必要以上に嫌悪感を抱く人が増えています。
+                </p>
+              </div>
+            </div>
+
+            <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+              <p class="p-work-higuma__heading-32">ターゲット</p>
+              <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+                <p class="p-work-higuma__heading-24">
+                  ヒグマのことはよく知らないけど、漠然と恐怖感や不安感のある北海道に住む大学生
+                </p>
+                <p class="p-work-higuma__text">
+                  豊かな森や自然に囲まれた北海道では、ドライブやキャンプ、山菜取りなどレジャーを楽しむ機会が多く、ヒグマと遭遇するリスクを抱えています。過度な恐怖や偏見をなくし、正しい知識と予防行動を促す上で、最も届けたい対象です。
+                </p>
+              </div>
+            </div>
+
+            <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+              <p class="p-work-higuma__heading-32">コンセプト</p>
+              <div class="p-work-higuma__body p-work-higuma__body--gap-36">
+                <p class="p-work-higuma__heading-28">
+                  「北海道の若者」が、「エンリッチングに情報」を得ることで、「ヒグマに対する誤認の解消」を達成するサイト。
+                </p>
+                <p class="p-work-higuma__text">
+                  既存のヒグマ情報サイトは正しく伝える一方で堅苦しく、勉強している感が出てしまい若者が飽きやすいと考えました。そこで本サイトでは、親しみやすいイラストや見ていて飽きないアニメーションを取り入れ、気軽に知識を学ぶことができるサイトを目標としました。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-higuma (Background) -->
+
+    <!-- =========================================
+         p-work-higuma (Design)
+         Figma: node-id=4657-1892「p-work-detail--02」（2026-09-26取得）
+         「真面目な情報を楽しく伝えるイラスト」→「見ている人を飽きさせない
+         アニメーション機能」（ローディング／各セクションの2枚並び）→
+         「熊の不器用さを表現するカクカクしたフォント」→「安心感とユーモアが
+         あるカラー設計」→「サイトデザイン」（全体モックアップ）の5ブロック
+         構成。イラスト／カラースウォッチ／サイトデザイン全体モックアップは
+         Figma上のみに存在しアセット取得ができなかったため、当初は他ページの
+         「画像未設定」箇所と同じくbg-placeholderのプレースホルダーとしていたが、
+         2026-09-26にユーザーから実素材（イラスト一覧・カラースウォッチ・
+         サイト全体モックアップ）を提供いただき、いずれも反映済み。イラスト
+         一覧は白背景を透過処理し（境界検出によるアルファ抜き）、サイト全体
+         モックアップは元画像が444×2000pxと低解像度だったため軽量超解像モデル
+         （FSRCNN）で補正した。ローディング／各セクションの2枚はFigma上でも
+         単色プレースホルダー（bg-[#c4c4c4]）扱いのため、同様にプレースホルダー
+         とした。
+         ========================================= -->
+    <section class="p-work-higuma">
+      <div class="p-work-higuma__panel">
+        <div class="p-work-higuma__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">Design</p>
+          </div>
+
+          <div class="p-work-higuma__body p-work-higuma__body--gap-72">
+            <div class="p-work-higuma__body p-work-higuma__body--gap-24">
+              <p class="p-work-higuma__heading-28 p-work-higuma__heading-28--loose">真面目な情報を楽しく伝えるイラスト</p>
+              <p class="p-work-higuma__text">
+                より気軽にサイトを見てもらうために、イラストはカジュアルで親しみやすいイラストを制作しました。
+              </p>
+              <div class="p-work-higuma__img p-work-higuma__img--wide p-work-higuma__img--transparent">
+                <img
+                  src="assets/img/p-work-higuma__illustration.webp"
+                  alt="サイトで使用したイラスト素材"
+                  width="1762"
+                  height="956"
+                />
+              </div>
+            </div>
+
+            <div class="p-work-higuma__body p-work-higuma__body--gap-24">
+              <p class="p-work-higuma__heading-28 p-work-higuma__heading-28--loose">見ている人を飽きさせないアニメーション機能</p>
+              <p class="p-work-higuma__text">
+                閲覧者の離脱を防ぎ、最後まで興味を持ってもらうための工夫として、サイトの各ポイントにアニメーションを取り入れました。
+              </p>
+              <div class="p-work-higuma__row">
+                <div class="p-work-higuma__col">
+                  <ol class="p-work-higuma__list p-work-higuma__list--sm" start="1">
+                    <li>ローディング</li>
+                  </ol>
+                  <div class="p-work-higuma__img p-work-higuma__img--wide"><!-- 画像未設定（Figma上でも単色プレースホルダー扱い） --></div>
+                </div>
+                <div class="p-work-higuma__col">
+                  <ol class="p-work-higuma__list p-work-higuma__list--sm" start="2">
+                    <li>各セクション</li>
+                  </ol>
+                  <div class="p-work-higuma__img p-work-higuma__img--wide"><!-- 画像未設定（Figma上でも単色プレースホルダー扱い） --></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-work-higuma__body p-work-higuma__body--gap-24">
+              <p class="p-work-higuma__heading-28 p-work-higuma__heading-28--tight">熊の不器用さを表現するカクカクしたフォント</p>
+              <p class="p-work-higuma__text">
+                熊の不器用さをイラスト親文章などの表現に頼らず、タイポグラフィの表現によって視覚的に伝えるアプローチをしました。そこでフォントには、直線的で飾りのない素朴さの持つ「ADS-strong」を採用しました。
+              </p>
+            </div>
+
+            <div class="p-work-higuma__body p-work-higuma__body--gap-24">
+              <p class="p-work-higuma__heading-28 p-work-higuma__heading-28--tight">安心感とユーモアがあるカラー設計</p>
+              <div class="p-work-higuma__body p-work-higuma__body--center">
+                <p class="p-work-higuma__text">
+                  ベースカラーとメインカラーには、画面全体に落ち着きと心地よさをもたらす中間色を採用しています。刺激を抑えた柔らかいイエローのベースと、深みのあるグリーンやブラウンのメインカラーが、見る人に圧迫感を与えない安定した空間を作り出します。また、アクセントカラーには、明るく彩度の高いオレンジ、ブルー、ピンクを組み合わせることで、遊び心と多様性を表現しています。シックなベースに対してポップなアクセントを効かせることで、親しみやすさと楽しさを演出します。
+                </p>
+                <div class="p-work-higuma__img p-work-higuma__img--color">
+                  <img
+                    src="assets/img/p-work-higuma__color.webp"
+                    alt="カラー設計のスウォッチ（ベース／メイン／アクセント）"
+                    width="858"
+                    height="578"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-work-higuma__body p-work-higuma__body--gap-60 p-work-higuma__body--center">
+            <p class="p-work-higuma__heading-32">サイトデザイン</p>
+            <div class="p-work-higuma__img p-work-higuma__img--mockup">
+              <img
+                src="assets/img/p-work-higuma__mockup.webp"
+                alt="サイトデザイン全体モックアップ"
+                width="924"
+                height="4096"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-work-higuma (Design) -->
+
+    <!-- =========================================
+         p-others
+         Figma: node-id=4424-1662「p-others」（PC実測）/
+                node-id=4424-1721「p-others」（SP実測）
+         ユーザー指示により、各Work詳細ページの一番下（p-work-higumaセクション群の
+         直後）に配置。その他の制作物のサムネイルのみを並べる簡易ギャラリー。
+         2026-09-26追記: work-higuma.html自身の「others」には自分自身への
+         リンクは含めず、他の6作品（work-izakaya/app/novelty/portfolio/
+         sukusuku/detail）へのリンクを表示する。
+         ========================================= -->
+    <section class="p-others">
+      <div class="p-others__panel">
+        <div class="p-others__inner">
+          <div class="c-section-title">
+            <p class="c-section-title__title">others</p>
+          </div>
+
+          <div class="p-others__list">
+            <div class="p-others__wrapper-img">
+              <a href="work-izakaya.html" class="p-others__link">
+                <div class="p-others__img"><!-- 画像未設定（制作途中のためプレースホルダー） --></div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-app.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-app.webp"
+                    alt="学生向け交通系アプリ"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-portfolio.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-portfolio.webp"
+                    alt="ポートフォリオサイト"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-sukusuku.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-sukusuku.webp"
+                    alt="架空サイトすくすく"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-novelty.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img-novelty.webp"
+                    alt="ノベルティ制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="p-others__wrapper-img">
+              <a href="work-detail.html" class="p-others__link">
+                <div class="p-others__img">
+                  <img
+                    src="assets/img/p-outline__img.webp"
+                    alt="バナー制作"
+                    width="523"
+                    height="359"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /p-others -->
+
+  </main>
+
+  <!-- =========================================
+       p-footer
+       Figma: node-id=4424-1575「l-footer」（PC実測）/
+              node-id=4424-1956「l-conteiner」（SP実測）
+       ========================================= -->
+  <footer class="l-footer">
+    <div class="p-footer">
+      <div class="p-footer__panel">
+        <div class="p-footer__contact">
+          <p class="p-footer__label">Contact</p>
+          <a href="mailto:s2421160@s.do-johodai.ac.jp" class="p-footer__mail" target="_blank">s2421160@s.do-johodai.ac.jp</a>
+        </div>
+        <p class="p-footer__copyright">&copy; 2026 Kimura Ryusei</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /p-footer -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

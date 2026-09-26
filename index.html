@@ -82,7 +82,7 @@
           <div class="p-hero__visual-area">
             <div class="p-hero__visual-wrapper">
               <div class="p-hero__visual1">
-                <img src="assets/img/p-hero__visual1.png" alt="" width="697" height="726" />
+                <img src="assets/img/p-hero__visual1.webp" alt="" width="697" height="726" />
               </div>
             </div>
 
@@ -108,9 +108,21 @@
           </div>
 
           <ul class="p-work-list">
-            <!-- node-id=4200-1070マスターで確認。制作中のため画像は未設定（プレースホルダー）
-                 のまま。2026-09-06: work-izakaya.html（node-id=4481-1347等）を実装した
-                 ことに伴い、リンクのみ他カードと同様に追加した（旧: リンク未設定）。 -->
+            <!-- 2026-09-26再取得（node-id=4200-1070マスター、7カード全体を再確認）:
+                 - カードの並び順をマスターに合わせて修正
+                   （居酒屋瑠玖→課題解決サイト→架空サイトすくすく→ポートフォリオサイト→
+                   学生向け交通系アプリ→ノベルティ制作→バナー制作）。
+                 - 1枚目のタイトルがFigma更新で「クライアント様　サイトリニューアル
+                   (制作途中）」→「居酒屋瑠玖　サイトリニューアル」に変更されていた
+                   （work-izakaya.html側は既に「居酒屋瑠玖リニューアルサイト」に修正済み
+                   だったが、index.html側のカードタイトルへの反映が漏れていたため今回追従）。
+                 - 6枚目（ノベルティ制作）のタグが「#パッケージデザイン」→
+                   「#ラベルデザイン」に変更されていたため修正。
+                 - 2枚目（課題解決サイト）はマスター上「架空サイトとなりの、デカくて
+                   不器用なやつ」という別タイトルになっていたが、work-higuma.html自体の
+                   タイトル・見出しや他ページからのリンクカードaltで既に「課題解決サイト」
+                   が広く定着しているため、ユーザー確認の上タイトルは変更せず据え置いた。
+                 画像は制作中のため引き続き未設定（プレースホルダー）。 -->
             <li class="p-card-work">
               <a href="work-izakaya.html" class="p-card-work__link">
                 <div class="p-card-work__img-wrapper">
@@ -121,24 +133,24 @@
                     <li class="c-category">#クライアントワークス</li>
                     <li class="c-category c-category--outline">#Webデザイン</li>
                   </ul>
-                  <p class="p-card-work__title">クライアント様　サイトリニューアル(制作途中）</p>
+                  <p class="p-card-work__title">居酒屋瑠玖　サイトリニューアル</p>
                 </div>
               </a>
             </li>
 
             <li class="p-card-work">
-              <a href="work-app.html" class="p-card-work__link">
+              <a href="work-higuma.html" class="p-card-work__link">
                 <div class="p-card-work__img-wrapper">
                   <div class="p-card-work__img">
-                    <img src="assets/img/p-outline__img-app.webp" alt="学生向け交通系アプリ" width="480" height="300" />
+                    <img src="assets/img/p-outline__img-higuma.webp" alt="課題解決サイト" width="480" height="300" />
                   </div>
                 </div>
                 <div class="p-card-work__content">
                   <ul class="p-card-work__category-list">
                     <li class="c-category">#自主制作</li>
-                    <li class="c-category c-category--outline">#アプリデザイン</li>
+                    <li class="c-category c-category--outline">#Webデザイン</li>
                   </ul>
-                  <p class="p-card-work__title">学生向け交通系アプリ</p>
+                  <p class="p-card-work__title">課題解決サイト</p>
                 </div>
               </a>
             </li>
@@ -152,7 +164,7 @@
                 </div>
                 <div class="p-card-work__content">
                   <ul class="p-card-work__category-list">
-                    <li class="c-category">#課題制作</li>
+                    <li class="c-category">#自主制作</li>
                     <li class="c-category c-category--outline">#Webデザイン</li>
                   </ul>
                   <p class="p-card-work__title">架空サイトすくすく</p>
@@ -179,6 +191,23 @@
             </li>
 
             <li class="p-card-work">
+              <a href="work-app.html" class="p-card-work__link">
+                <div class="p-card-work__img-wrapper">
+                  <div class="p-card-work__img">
+                    <img src="assets/img/p-outline__img-app.webp" alt="学生向け交通系アプリ" width="480" height="300" />
+                  </div>
+                </div>
+                <div class="p-card-work__content">
+                  <ul class="p-card-work__category-list">
+                    <li class="c-category">#自主制作</li>
+                    <li class="c-category c-category--outline">#アプリデザイン</li>
+                  </ul>
+                  <p class="p-card-work__title">学生向け交通系アプリ</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-card-work">
               <a href="work-novelty.html" class="p-card-work__link">
                 <div class="p-card-work__img-wrapper">
                   <div class="p-card-work__img"><img src="assets/img/p-outline__img-novelty.webp" alt="ノベルティ制作"
@@ -188,7 +217,7 @@
                 <div class="p-card-work__content">
                   <ul class="p-card-work__category-list">
                     <li class="c-category">#ワークショップ課題</li>
-                    <li class="c-category c-category--outline">#パッケージデザイン</li>
+                    <li class="c-category c-category--outline">#ラベルデザイン</li>
                   </ul>
                   <p class="p-card-work__title">ノベルティ制作</p>
                 </div>
@@ -231,7 +260,7 @@
 
           <div class="c-profile-card">
             <div class="c-profile-card__img">
-              <img src="assets/img/c-profile-card__img.png" alt="Ryusei Kimura" width="372" height="372" />
+              <img src="assets/img/c-profile-card__img.webp" alt="Ryusei Kimura" width="372" height="372" />
             </div>
             <div class="c-profile-card__content">
               <div class="c-profile-card__body">
